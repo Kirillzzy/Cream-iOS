@@ -13,6 +13,10 @@
 		8A47A1901F359411008C4271 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A47A18F1F359411008C4271 /* Assets.xcassets */; };
 		8A47A1931F359411008C4271 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A47A1911F359411008C4271 /* LaunchScreen.storyboard */; };
 		8A47A1A01F3596D2008C4271 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A47A19F1F3596D2008C4271 /* MainViewController.swift */; };
+		8A47A1A71F35B263008C4271 /* TipEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A47A1A61F35B263008C4271 /* TipEntity.swift */; };
+		8A47A1AA1F35B8B9008C4271 /* TipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A47A1A91F35B8B9008C4271 /* TipView.swift */; };
+		8A47A1AD1F35B914008C4271 /* UIView+Nibload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A47A1AC1F35B914008C4271 /* UIView+Nibload.swift */; };
+		8A47A1B11F35B9C8008C4271 /* TipView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A47A1B01F35B9C8008C4271 /* TipView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +29,10 @@
 		8A47A1921F359411008C4271 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8A47A19F1F3596D2008C4271 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = ViewControllers/MainViewController.swift; sourceTree = "<group>"; };
 		8A47A1A11F3596D7008C4271 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Config/Info.plist; sourceTree = "<group>"; };
+		8A47A1A61F35B263008C4271 /* TipEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TipEntity.swift; path = Entities/TipEntity.swift; sourceTree = "<group>"; };
+		8A47A1A91F35B8B9008C4271 /* TipView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TipView.swift; path = Custom/TipView.swift; sourceTree = "<group>"; };
+		8A47A1AC1F35B914008C4271 /* UIView+Nibload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+Nibload.swift"; path = "Extensions/UIView+Nibload.swift"; sourceTree = "<group>"; };
+		8A47A1B01F35B9C8008C4271 /* TipView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TipView.xib; path = Custom/TipView.xib; sourceTree = "<group>"; };
 		D3E6C93BAC61FF18EC7F4E23 /* Pods_lksh_ios_cream.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_lksh_ios_cream.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -87,8 +95,8 @@
 		8A47A19A1F359436008C4271 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				8A47A1A41F35A720008C4271 /* Launch */,
 				8A47A18C1F359411008C4271 /* Main.storyboard */,
-				8A47A1911F359411008C4271 /* LaunchScreen.storyboard */,
 			);
 			name = Storyboards;
 			sourceTree = "<group>";
@@ -98,6 +106,9 @@
 			children = (
 				8A47A1881F359411008C4271 /* AppDelegate.swift */,
 				8A47A19E1F35948A008C4271 /* ViewControllers */,
+				8A47A1A51F35AE81008C4271 /* Entities */,
+				8A47A1A81F35B832008C4271 /* Custom */,
+				8A47A1AB1F35B8F5008C4271 /* Extenstions */,
 			);
 			name = Sources;
 			sourceTree = "<group>";
@@ -126,6 +137,55 @@
 				8A47A19F1F3596D2008C4271 /* MainViewController.swift */,
 			);
 			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		8A47A1A41F35A720008C4271 /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				8A47A1911F359411008C4271 /* LaunchScreen.storyboard */,
+			);
+			name = Launch;
+			sourceTree = "<group>";
+		};
+		8A47A1A51F35AE81008C4271 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				8A47A1A61F35B263008C4271 /* TipEntity.swift */,
+			);
+			name = Entities;
+			sourceTree = "<group>";
+		};
+		8A47A1A81F35B832008C4271 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				8A47A1AE1F35B97E008C4271 /* Views */,
+			);
+			name = Custom;
+			sourceTree = "<group>";
+		};
+		8A47A1AB1F35B8F5008C4271 /* Extenstions */ = {
+			isa = PBXGroup;
+			children = (
+				8A47A1AC1F35B914008C4271 /* UIView+Nibload.swift */,
+			);
+			name = Extenstions;
+			sourceTree = "<group>";
+		};
+		8A47A1AE1F35B97E008C4271 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8A47A1AF1F35B98A008C4271 /* TipView */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		8A47A1AF1F35B98A008C4271 /* TipView */ = {
+			isa = PBXGroup;
+			children = (
+				8A47A1A91F35B8B9008C4271 /* TipView.swift */,
+				8A47A1B01F35B9C8008C4271 /* TipView.xib */,
+			);
+			name = TipView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,6 +252,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A47A1B11F35B9C8008C4271 /* TipView.xib in Resources */,
 				8A47A1931F359411008C4271 /* LaunchScreen.storyboard in Resources */,
 				8A47A1901F359411008C4271 /* Assets.xcassets in Resources */,
 				8A47A18E1F359411008C4271 /* Main.storyboard in Resources */,
@@ -267,8 +328,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A47A1AD1F35B914008C4271 /* UIView+Nibload.swift in Sources */,
+				8A47A1AA1F35B8B9008C4271 /* TipView.swift in Sources */,
 				8A47A1891F359411008C4271 /* AppDelegate.swift in Sources */,
 				8A47A1A01F3596D2008C4271 /* MainViewController.swift in Sources */,
+				8A47A1A71F35B263008C4271 /* TipEntity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,6 +460,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = KH2KDZEEE3;
 				INFOPLIST_FILE = "$(SRCROOT)/lksh-ios-cream/Config/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kirillzzy.lksh-ios-cream";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -410,6 +475,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = KH2KDZEEE3;
 				INFOPLIST_FILE = "$(SRCROOT)/lksh-ios-cream/Config/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kirillzzy.lksh-ios-cream";
 				PRODUCT_NAME = "$(TARGET_NAME)";

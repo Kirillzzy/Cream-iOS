@@ -17,6 +17,10 @@
 		8A47A1AA1F35B8B9008C4271 /* TipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A47A1A91F35B8B9008C4271 /* TipView.swift */; };
 		8A47A1AD1F35B914008C4271 /* UIView+Nibload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A47A1AC1F35B914008C4271 /* UIView+Nibload.swift */; };
 		8A47A1B11F35B9C8008C4271 /* TipView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A47A1B01F35B9C8008C4271 /* TipView.xib */; };
+		8A47A1B41F35C475008C4271 /* UIFont+AppFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A47A1B31F35C475008C4271 /* UIFont+AppFonts.swift */; };
+		8A47A1B81F35CABD008C4271 /* UIColor+ColorsPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A47A1B71F35CABD008C4271 /* UIColor+ColorsPalette.swift */; };
+		8A47A1BA1F35CB03008C4271 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A47A1B91F35CB03008C4271 /* UIColor+Hex.swift */; };
+		8A47A1BD1F35CB45008C4271 /* String+Range.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A47A1BC1F35CB45008C4271 /* String+Range.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +37,10 @@
 		8A47A1A91F35B8B9008C4271 /* TipView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TipView.swift; path = Custom/TipView.swift; sourceTree = "<group>"; };
 		8A47A1AC1F35B914008C4271 /* UIView+Nibload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+Nibload.swift"; path = "Extensions/UIView+Nibload.swift"; sourceTree = "<group>"; };
 		8A47A1B01F35B9C8008C4271 /* TipView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TipView.xib; path = Custom/TipView.xib; sourceTree = "<group>"; };
+		8A47A1B31F35C475008C4271 /* UIFont+AppFonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIFont+AppFonts.swift"; path = "Extensions/UIFont+AppFonts.swift"; sourceTree = "<group>"; };
+		8A47A1B71F35CABD008C4271 /* UIColor+ColorsPalette.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+ColorsPalette.swift"; path = "Extensions/UIColor+ColorsPalette.swift"; sourceTree = "<group>"; };
+		8A47A1B91F35CB03008C4271 /* UIColor+Hex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+Hex.swift"; path = "Extensions/UIColor+Hex.swift"; sourceTree = "<group>"; };
+		8A47A1BC1F35CB45008C4271 /* String+Range.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+Range.swift"; path = "Extensions/String+Range.swift"; sourceTree = "<group>"; };
 		D3E6C93BAC61FF18EC7F4E23 /* Pods_lksh_ios_cream.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_lksh_ios_cream.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -166,7 +174,10 @@
 		8A47A1AB1F35B8F5008C4271 /* Extenstions */ = {
 			isa = PBXGroup;
 			children = (
-				8A47A1AC1F35B914008C4271 /* UIView+Nibload.swift */,
+				8A47A1B21F35C458008C4271 /* UIView */,
+				8A47A1B51F35C47A008C4271 /* UIFont */,
+				8A47A1B61F35CA96008C4271 /* UIColor */,
+				8A47A1BB1F35CB33008C4271 /* String */,
 			);
 			name = Extenstions;
 			sourceTree = "<group>";
@@ -186,6 +197,39 @@
 				8A47A1B01F35B9C8008C4271 /* TipView.xib */,
 			);
 			name = TipView;
+			sourceTree = "<group>";
+		};
+		8A47A1B21F35C458008C4271 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				8A47A1AC1F35B914008C4271 /* UIView+Nibload.swift */,
+			);
+			name = UIView;
+			sourceTree = "<group>";
+		};
+		8A47A1B51F35C47A008C4271 /* UIFont */ = {
+			isa = PBXGroup;
+			children = (
+				8A47A1B31F35C475008C4271 /* UIFont+AppFonts.swift */,
+			);
+			name = UIFont;
+			sourceTree = "<group>";
+		};
+		8A47A1B61F35CA96008C4271 /* UIColor */ = {
+			isa = PBXGroup;
+			children = (
+				8A47A1B71F35CABD008C4271 /* UIColor+ColorsPalette.swift */,
+				8A47A1B91F35CB03008C4271 /* UIColor+Hex.swift */,
+			);
+			name = UIColor;
+			sourceTree = "<group>";
+		};
+		8A47A1BB1F35CB33008C4271 /* String */ = {
+			isa = PBXGroup;
+			children = (
+				8A47A1BC1F35CB45008C4271 /* String+Range.swift */,
+			);
+			name = String;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -329,8 +373,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A47A1AD1F35B914008C4271 /* UIView+Nibload.swift in Sources */,
+				8A47A1BD1F35CB45008C4271 /* String+Range.swift in Sources */,
+				8A47A1BA1F35CB03008C4271 /* UIColor+Hex.swift in Sources */,
+				8A47A1B41F35C475008C4271 /* UIFont+AppFonts.swift in Sources */,
 				8A47A1AA1F35B8B9008C4271 /* TipView.swift in Sources */,
 				8A47A1891F359411008C4271 /* AppDelegate.swift in Sources */,
+				8A47A1B81F35CABD008C4271 /* UIColor+ColorsPalette.swift in Sources */,
 				8A47A1A01F3596D2008C4271 /* MainViewController.swift in Sources */,
 				8A47A1A71F35B263008C4271 /* TipEntity.swift in Sources */,
 			);

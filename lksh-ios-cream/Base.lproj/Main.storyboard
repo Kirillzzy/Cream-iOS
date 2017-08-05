@@ -21,20 +21,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Пожелания ЛКШат" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YNg-bA-axa">
+                                <rect key="frame" x="16" y="45" width="343" height="31.5"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8RD-Wn-ZId" customClass="KolodaView" customModule="Koloda">
-                                <rect key="frame" x="0.0" y="85" width="375" height="482"/>
+                                <rect key="frame" x="0.0" y="92.5" width="375" height="474.5"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.94117647058823528" green="0.96078431372549022" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="YNg-bA-axa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="5Lw-Wp-rye"/>
                             <constraint firstAttribute="trailing" secondItem="8RD-Wn-ZId" secondAttribute="trailing" id="7Ug-Mi-qZj"/>
+                            <constraint firstItem="8RD-Wn-ZId" firstAttribute="top" secondItem="YNg-bA-axa" secondAttribute="bottom" constant="16" id="T26-qk-jpb"/>
+                            <constraint firstItem="YNg-bA-axa" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="25" id="X4r-Db-6AD"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="8RD-Wn-ZId" secondAttribute="bottom" constant="100" id="i19-ns-cRi"/>
-                            <constraint firstItem="8RD-Wn-ZId" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="65" id="phW-Vt-6lk"/>
+                            <constraint firstAttribute="trailing" secondItem="YNg-bA-axa" secondAttribute="trailing" constant="16" id="nCo-AX-arM"/>
                             <constraint firstItem="8RD-Wn-ZId" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="riz-ed-mtO"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="kolodaView" destination="8RD-Wn-ZId" id="3Pa-gW-3ri"/>
+                        <outlet property="titleLabel" destination="YNg-bA-axa" id="R9v-pR-4BC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

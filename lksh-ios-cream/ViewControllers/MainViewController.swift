@@ -11,7 +11,12 @@ import Koloda
 
 class MainViewController: UIViewController {
 
-  @IBOutlet var kolodaView: KolodaView! {
+  @IBOutlet fileprivate var titleLabel: UILabel! {
+    didSet {
+      titleLabel.font = UIFont.appFont(.avenirNextMedium(size: 23))
+    }
+  }
+  @IBOutlet fileprivate var kolodaView: KolodaView! {
     didSet {
       modalTransitionStyle = .flipHorizontal
       kolodaView.alphaValueSemiTransparent = 1
@@ -30,6 +35,7 @@ class MainViewController: UIViewController {
     let tip = TipEntity()
     tip.text = "Hello everyone!"
     tip.title = "Greetings"
+    tip.creator = "Kirill Averyanov"
     return [tip, tip, tip, tip, tip]
   }
 
@@ -67,6 +73,7 @@ extension MainViewController: KolodaViewDelegate, KolodaViewDataSource {
     let item = modelCollection[index]
     view.titleLabel.text = item.title
     view.descriptionLabel.text = item.text
+    view.nameLabel.text = item.creator
 
     return view
   }

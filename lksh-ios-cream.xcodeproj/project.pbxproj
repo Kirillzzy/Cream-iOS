@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8328AEC549406583850952D9 /* Pods_lksh_ios_cream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3E6C93BAC61FF18EC7F4E23 /* Pods_lksh_ios_cream.framework */; };
 		8A47A1891F359411008C4271 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A47A1881F359411008C4271 /* AppDelegate.swift */; };
 		8A47A18E1F359411008C4271 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A47A18C1F359411008C4271 /* Main.storyboard */; };
 		8A47A1901F359411008C4271 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A47A18F1F359411008C4271 /* Assets.xcassets */; };
@@ -15,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		245396F1ADC64917687797B1 /* Pods-lksh-ios-cream.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lksh-ios-cream.debug.xcconfig"; path = "Pods/Target Support Files/Pods-lksh-ios-cream/Pods-lksh-ios-cream.debug.xcconfig"; sourceTree = "<group>"; };
+		7A86BBCE0D4365D204C7CAF6 /* Pods-lksh-ios-cream.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lksh-ios-cream.release.xcconfig"; path = "Pods/Target Support Files/Pods-lksh-ios-cream/Pods-lksh-ios-cream.release.xcconfig"; sourceTree = "<group>"; };
 		8A47A1851F359411008C4271 /* lksh-ios-cream.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "lksh-ios-cream.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A47A1881F359411008C4271 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8A47A18D1F359411008C4271 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -22,6 +25,7 @@
 		8A47A1921F359411008C4271 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8A47A19F1F3596D2008C4271 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = ViewControllers/MainViewController.swift; sourceTree = "<group>"; };
 		8A47A1A11F3596D7008C4271 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Config/Info.plist; sourceTree = "<group>"; };
+		D3E6C93BAC61FF18EC7F4E23 /* Pods_lksh_ios_cream.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_lksh_ios_cream.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8328AEC549406583850952D9 /* Pods_lksh_ios_cream.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		46E1B2040B0396F881D3CB9E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D3E6C93BAC61FF18EC7F4E23 /* Pods_lksh_ios_cream.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		84EA5436A0F3C88A23A1D93D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				245396F1ADC64917687797B1 /* Pods-lksh-ios-cream.debug.xcconfig */,
+				7A86BBCE0D4365D204C7CAF6 /* Pods-lksh-ios-cream.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		8A47A17C1F359411008C4271 = {
 			isa = PBXGroup;
 			children = (
 				8A47A1871F359411008C4271 /* lksh-ios-cream */,
 				8A47A1861F359411008C4271 /* Products */,
+				84EA5436A0F3C88A23A1D93D /* Pods */,
+				46E1B2040B0396F881D3CB9E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -111,9 +135,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8A47A1971F359411008C4271 /* Build configuration list for PBXNativeTarget "lksh-ios-cream" */;
 			buildPhases = (
+				C9CAA126E140FB35FEF91273 /* [CP] Check Pods Manifest.lock */,
 				8A47A1811F359411008C4271 /* Sources */,
 				8A47A1821F359411008C4271 /* Frameworks */,
 				8A47A1831F359411008C4271 /* Resources */,
+				8A47A1A31F3597A7008C4271 /* Swiftlint */,
+				52D6023FFDE81D3C7DCE2A56 /* [CP] Embed Pods Frameworks */,
+				7275A4A956E313F2FFEB3058 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -171,6 +199,68 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		52D6023FFDE81D3C7DCE2A56 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-lksh-ios-cream/Pods-lksh-ios-cream-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7275A4A956E313F2FFEB3058 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-lksh-ios-cream/Pods-lksh-ios-cream-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8A47A1A31F3597A7008C4271 /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "SWIFTLINT = ${PODS_ROOT}/SwiftLint/swiftlint\nSWFITLINT_CONFIG = ${PROJECT_DIR}/\n\nif which SWIFTLINT >/dev/null; then\nSWIFTLINT lint --config .swiftlint.yml\nelse\necho \"error: SwiftLint does not exist, download it from https://github.com/realm/SwiftLint\"\nexit 1\nfi";
+		};
+		C9CAA126E140FB35FEF91273 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8A47A1811F359411008C4271 /* Sources */ = {
@@ -301,6 +391,7 @@
 		};
 		8A47A1981F359411008C4271 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 245396F1ADC64917687797B1 /* Pods-lksh-ios-cream.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = KH2KDZEEE3;
@@ -314,6 +405,7 @@
 		};
 		8A47A1991F359411008C4271 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A86BBCE0D4365D204C7CAF6 /* Pods-lksh-ios-cream.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = KH2KDZEEE3;

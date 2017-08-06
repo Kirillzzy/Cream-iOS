@@ -33,9 +33,11 @@ class MainViewController: UIViewController {
   var modelCollection: [TipEntity] {
     // FIXME: Delete below after loading from internet
     let tip = TipEntity()
-    tip.text = "Hello everyone!"
-    tip.title = "Greetings"
+    // swiftlint:disable:next line_length
+    tip.text = "У нас в ГК нету коврика, из-за этого все страдают. На самом деле, много грязи и шняги. Если бы все подумали как решить эту проблему...."
+    tip.title = "Коврик в ГК"
     tip.creator = "Kirill Averyanov"
+    tip.likes = 15
     return [tip, tip, tip, tip, tip]
   }
 
@@ -74,6 +76,7 @@ extension MainViewController: KolodaViewDelegate, KolodaViewDataSource {
     view.titleLabel.text = item.title
     view.descriptionLabel.text = item.text
     view.nameLabel.text = item.creator
+    view.rateLabel.text = "\(item.likes)"
 
     return view
   }

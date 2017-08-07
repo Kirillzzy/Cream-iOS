@@ -138,34 +138,34 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Из проблем в сливки" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="h1u-sD-ZXR">
-                                <rect key="frame" x="8" y="250" width="359" height="36"/>
+                                <rect key="frame" x="8" y="242" width="359" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" red="0.43821383248730961" green="0.43821383248730961" blue="0.43821383248730961" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jgl-TU-td1">
-                                <rect key="frame" x="0.0" y="446" width="375" height="221"/>
+                                <rect key="frame" x="0.0" y="448" width="375" height="219"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_blur_view" translatesAutoresizingMaskIntoConstraints="NO" id="P8m-hb-UHo">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="221"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="219"/>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="PDC-00-gpI">
-                                        <rect key="frame" x="35" y="35" width="305" height="151"/>
+                                        <rect key="frame" x="35" y="40" width="305" height="139"/>
                                         <subviews>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Логин" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LoN-f9-mge">
-                                                <rect key="frame" x="0.0" y="0.0" width="305" height="37"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="305" height="33"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1b9-9c-xMs">
-                                                <rect key="frame" x="0.0" y="57" width="305" height="37"/>
+                                                <rect key="frame" x="0.0" y="53" width="305" height="33"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gbt-ry-nT6">
-                                                <rect key="frame" x="0.0" y="114" width="305" height="37"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gbt-ry-nT6" customClass="ActionButton" customModule="lksh_ios_cream" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="106" width="305" height="33"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <state key="normal" title="Войти">
                                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -184,13 +184,13 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="P8m-hb-UHo" secondAttribute="bottom" id="7n2-Mp-Ccj"/>
-                                    <constraint firstItem="PDC-00-gpI" firstAttribute="top" secondItem="Jgl-TU-td1" secondAttribute="top" constant="35" id="Bwd-bL-ecR"/>
+                                    <constraint firstItem="PDC-00-gpI" firstAttribute="top" secondItem="Jgl-TU-td1" secondAttribute="top" constant="40" id="Bwd-bL-ecR"/>
                                     <constraint firstItem="P8m-hb-UHo" firstAttribute="leading" secondItem="Jgl-TU-td1" secondAttribute="leading" id="L6u-nA-3p2"/>
                                     <constraint firstItem="P8m-hb-UHo" firstAttribute="top" secondItem="Jgl-TU-td1" secondAttribute="top" id="QSM-Yo-lA9"/>
                                     <constraint firstItem="PDC-00-gpI" firstAttribute="leading" secondItem="Jgl-TU-td1" secondAttribute="leading" constant="35" id="Ue9-m3-FbX"/>
                                     <constraint firstAttribute="trailing" secondItem="P8m-hb-UHo" secondAttribute="trailing" id="aes-kO-pD6"/>
                                     <constraint firstAttribute="trailing" secondItem="PDC-00-gpI" secondAttribute="trailing" constant="35" id="jUc-lu-ECZ"/>
-                                    <constraint firstAttribute="bottom" secondItem="PDC-00-gpI" secondAttribute="bottom" constant="35" id="ykV-Gy-2MS"/>
+                                    <constraint firstAttribute="bottom" secondItem="PDC-00-gpI" secondAttribute="bottom" constant="40" id="ykV-Gy-2MS"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -200,14 +200,14 @@
                             <constraint firstAttribute="trailing" secondItem="Pzf-Vt-W1l" secondAttribute="trailing" id="BpD-VI-Zhg"/>
                             <constraint firstItem="Pzf-Vt-W1l" firstAttribute="top" secondItem="Kfe-Fb-Wov" secondAttribute="bottom" id="Bro-Gr-DmW"/>
                             <constraint firstItem="Pzf-Vt-W1l" firstAttribute="leading" secondItem="Sfd-K2-PQh" secondAttribute="leading" id="Es6-fq-qmq"/>
-                            <constraint firstItem="h1u-sD-ZXR" firstAttribute="top" secondItem="f2d-Pp-MFy" secondAttribute="bottom" constant="16" id="H0j-fs-eAq"/>
+                            <constraint firstItem="h1u-sD-ZXR" firstAttribute="top" secondItem="f2d-Pp-MFy" secondAttribute="bottom" constant="8" id="H0j-fs-eAq"/>
                             <constraint firstItem="9hI-nn-Uma" firstAttribute="top" secondItem="Pzf-Vt-W1l" secondAttribute="bottom" id="KJv-ek-X47"/>
                             <constraint firstItem="f2d-Pp-MFy" firstAttribute="leading" secondItem="Sfd-K2-PQh" secondAttribute="leading" constant="8" id="Lzb-eS-pS3"/>
                             <constraint firstAttribute="trailing" secondItem="h1u-sD-ZXR" secondAttribute="trailing" constant="8" id="Wps-zi-G57"/>
                             <constraint firstItem="fCY-Mo-Mvx" firstAttribute="height" secondItem="Pzf-Vt-W1l" secondAttribute="height" multiplier="0.17" id="dQk-FF-mpP"/>
                             <constraint firstItem="Jgl-TU-td1" firstAttribute="leading" secondItem="Sfd-K2-PQh" secondAttribute="leading" id="dXq-fj-Yds"/>
                             <constraint firstItem="h1u-sD-ZXR" firstAttribute="leading" secondItem="Sfd-K2-PQh" secondAttribute="leading" constant="8" id="etO-Av-cLE"/>
-                            <constraint firstItem="Jgl-TU-td1" firstAttribute="top" secondItem="h1u-sD-ZXR" secondAttribute="bottom" constant="160" id="hnh-yZ-GwD"/>
+                            <constraint firstItem="Jgl-TU-td1" firstAttribute="top" secondItem="h1u-sD-ZXR" secondAttribute="bottom" constant="170" id="hnh-yZ-GwD"/>
                             <constraint firstItem="f2d-Pp-MFy" firstAttribute="top" secondItem="fCY-Mo-Mvx" secondAttribute="bottom" constant="16" id="hpi-ux-t7Y"/>
                             <constraint firstAttribute="trailing" secondItem="f2d-Pp-MFy" secondAttribute="trailing" constant="8" id="iYN-hr-5nC"/>
                             <constraint firstAttribute="trailing" secondItem="Jgl-TU-td1" secondAttribute="trailing" id="mGf-IC-CXz"/>

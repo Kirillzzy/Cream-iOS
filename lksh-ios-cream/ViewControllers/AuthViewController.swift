@@ -24,7 +24,7 @@ class AuthViewController: UIViewController {
   }
   @IBOutlet fileprivate var loginTextField: UITextField!
   @IBOutlet fileprivate var passwordTextField: UITextField!
-  @IBOutlet fileprivate var loginButton: UIButton! {
+  @IBOutlet fileprivate var loginButton: ActionButton! {
     didSet {
       loginButton.titleLabel?.font = UIFont.appFont(.avenirNextMedium(size: 17))
       loginButton.setTitle("Войти".localized, for: .normal)
@@ -34,10 +34,18 @@ class AuthViewController: UIViewController {
   }
   @IBOutlet var placeholderViewBottomConstraint: NSLayoutConstraint!
   @IBOutlet var placeholderViewUpConstraint: NSLayoutConstraint!
+  fileprivate var tapGesture: UITapGestureRecognizer!
 
   override func viewDidLoad() {
     super.viewDidLoad()
     keyboardDelegate = self
+
+    tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTapGesture(_:)))
+    view.addGestureRecognizer(tapGesture)
+  }
+
+  @objc fileprivate func handleTapGesture(_ sender: UITapGestureRecognizer) {
+    dismissKeyboard()
   }
 
   fileprivate func dismissKeyboard() {

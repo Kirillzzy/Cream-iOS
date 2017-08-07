@@ -23,6 +23,7 @@ extension UIColor {
     case orange
   }
 
+  // swiftlint:disable:next cyclomatic_complexity
   convenience init(_ colorType: ColorType) {
     switch colorType {
     case .gray:

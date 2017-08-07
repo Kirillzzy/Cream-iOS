@@ -93,5 +93,4 @@ extension UITableView {
     }
     self.backgroundColor = configuration.backgroundColor
   }
-  
 }

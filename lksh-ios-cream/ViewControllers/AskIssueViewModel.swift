@@ -10,7 +10,7 @@ import UIKit
 
 class AskIssueViewModel: NSObject, DisplayCollection {
   static var modelsForRegistration: [CellViewAnyModelType.Type] {
-    return [TextFieldPlateTableViewCellModel.self, TextFieldPlateTableViewCellModel.self]
+    return [TextFieldPlateTableViewCellModel.self, TextViewPlateTableViewCellModel.self]
   }
 
   enum `Type` {
@@ -39,7 +39,7 @@ class AskIssueViewModel: NSObject, DisplayCollection {
                                                 self?.titleText = value
       })
     case .description:
-      return TextViewPlateTableViewCellModel(placeholder: "Описание".localized,
+      return TextViewPlateTableViewCellModel(placeholder: "Поясните ваше пожелание".localized,
                                              textViewDelegate: self,
                                              delegate: self)
     }
@@ -51,6 +51,31 @@ class AskIssueViewModel: NSObject, DisplayCollection {
 
   func numberOfRows(in section: Int) -> Int {
     return 1
+  }
+
+  func height(for indexPath: IndexPath) -> CGFloat {
+    switch sections[indexPath.section] {
+    case .title:
+      return UITableViewAutomaticDimension
+    case .description:
+      return 175
+    }
+  }
+
+  func headerHeight(for section: Int) -> CGFloat {
+    switch sections[section] {
+    case .title, .description:
+      return 40
+    }
+  }
+
+  func headerTitle(for section: Int) -> String {
+    switch sections[section] {
+    case .title:
+      return "Заголовок".localized
+    case .description:
+      return "Описание".localized
+    }
   }
 
 }

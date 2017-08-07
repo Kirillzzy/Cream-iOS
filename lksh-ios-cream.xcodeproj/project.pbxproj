@@ -42,6 +42,11 @@
 		8AB88AD51F3876E9005DA815 /* TextViewPlateTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AB88AD21F3876E9005DA815 /* TextViewPlateTableViewCell.xib */; };
 		8AB88AD61F3876E9005DA815 /* TextViewPlateTableViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB88AD31F3876E9005DA815 /* TextViewPlateTableViewCellModel.swift */; };
 		8AB88AD81F38773C005DA815 /* TextViewWithPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB88AD71F38773C005DA815 /* TextViewWithPlaceholder.swift */; };
+		8AB88ADC1F387A89005DA815 /* DefaultTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB88ADA1F387A89005DA815 /* DefaultTableHeaderView.swift */; };
+		8AB88ADD1F387A89005DA815 /* DefaultTableHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AB88ADB1F387A89005DA815 /* DefaultTableHeaderView.xib */; };
+		8AB88ADF1F387AFA005DA815 /* UITableView+Reuse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB88ADE1F387AF9005DA815 /* UITableView+Reuse.swift */; };
+		8AB88AE21F387B45005DA815 /* UIHeaderFooterView+Reuse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB88AE11F387B45005DA815 /* UIHeaderFooterView+Reuse.swift */; };
+		8AB88AE41F387BBB005DA815 /* UITableView+CellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB88AE31F387BBB005DA815 /* UITableView+CellViewModel.swift */; };
 		8AE792F01F3849DD00526845 /* AskIssueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE792EF1F3849DD00526845 /* AskIssueViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -84,6 +89,11 @@
 		8AB88AD21F3876E9005DA815 /* TextViewPlateTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TextViewPlateTableViewCell.xib; path = Custom/TextViewPlateTableViewCell.xib; sourceTree = "<group>"; };
 		8AB88AD31F3876E9005DA815 /* TextViewPlateTableViewCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextViewPlateTableViewCellModel.swift; path = Custom/TextViewPlateTableViewCellModel.swift; sourceTree = "<group>"; };
 		8AB88AD71F38773C005DA815 /* TextViewWithPlaceholder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextViewWithPlaceholder.swift; path = Helpers/TextViewWithPlaceholder.swift; sourceTree = "<group>"; };
+		8AB88ADA1F387A89005DA815 /* DefaultTableHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DefaultTableHeaderView.swift; path = Custom/DefaultTableHeaderView.swift; sourceTree = "<group>"; };
+		8AB88ADB1F387A89005DA815 /* DefaultTableHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DefaultTableHeaderView.xib; path = Custom/DefaultTableHeaderView.xib; sourceTree = "<group>"; };
+		8AB88ADE1F387AF9005DA815 /* UITableView+Reuse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UITableView+Reuse.swift"; path = "Extensions/UITableView+Reuse.swift"; sourceTree = "<group>"; };
+		8AB88AE11F387B45005DA815 /* UIHeaderFooterView+Reuse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIHeaderFooterView+Reuse.swift"; path = "Extensions/UIHeaderFooterView+Reuse.swift"; sourceTree = "<group>"; };
+		8AB88AE31F387BBB005DA815 /* UITableView+CellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UITableView+CellViewModel.swift"; path = "Extensions/UITableView+CellViewModel.swift"; sourceTree = "<group>"; };
 		8AE792EF1F3849DD00526845 /* AskIssueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AskIssueViewController.swift; path = ViewControllers/AskIssueViewController.swift; sourceTree = "<group>"; };
 		D3E6C93BAC61FF18EC7F4E23 /* Pods_lksh_ios_cream.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_lksh_ios_cream.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -225,6 +235,7 @@
 		8A47A1AB1F35B8F5008C4271 /* Extenstions */ = {
 			isa = PBXGroup;
 			children = (
+				8AB88AE01F387B26005DA815 /* UITableViewHeaderFooterView */,
 				8AB88ACB1F387200005DA815 /* UITableViewCell */,
 				8AB88AC81F3871C8005DA815 /* UITableView */,
 				8AB88AAE1F385C19005DA815 /* UIViewController */,
@@ -239,6 +250,7 @@
 		8A47A1AE1F35B97E008C4271 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				8AB88AD91F387A74005DA815 /* DefaultHeaderView */,
 				8A47A1AF1F35B98A008C4271 /* TipView */,
 			);
 			name = Views;
@@ -380,6 +392,8 @@
 			isa = PBXGroup;
 			children = (
 				8AB88AC91F3871DC005DA815 /* UITableView+RegisterCells.swift */,
+				8AB88ADE1F387AF9005DA815 /* UITableView+Reuse.swift */,
+				8AB88AE31F387BBB005DA815 /* UITableView+CellViewModel.swift */,
 			);
 			name = UITableView;
 			sourceTree = "<group>";
@@ -400,6 +414,23 @@
 				8AB88AD31F3876E9005DA815 /* TextViewPlateTableViewCellModel.swift */,
 			);
 			name = TextViewTableViewCell;
+			sourceTree = "<group>";
+		};
+		8AB88AD91F387A74005DA815 /* DefaultHeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				8AB88ADA1F387A89005DA815 /* DefaultTableHeaderView.swift */,
+				8AB88ADB1F387A89005DA815 /* DefaultTableHeaderView.xib */,
+			);
+			name = DefaultHeaderView;
+			sourceTree = "<group>";
+		};
+		8AB88AE01F387B26005DA815 /* UITableViewHeaderFooterView */ = {
+			isa = PBXGroup;
+			children = (
+				8AB88AE11F387B45005DA815 /* UIHeaderFooterView+Reuse.swift */,
+			);
+			name = UITableViewHeaderFooterView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -467,6 +498,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AB88ADD1F387A89005DA815 /* DefaultTableHeaderView.xib in Resources */,
 				8AB88A9E1F384CED005DA815 /* LaunchScreen.storyboard in Resources */,
 				8AB88AC01F387034005DA815 /* TextFieldPlateTableViewCell.xib in Resources */,
 				8A47A1B11F35B9C8008C4271 /* TipView.xib in Resources */,
@@ -560,6 +592,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8AB88AAA1F385986005DA815 /* String+Localize.swift in Sources */,
+				8AB88AE41F387BBB005DA815 /* UITableView+CellViewModel.swift in Sources */,
 				8A47A1AD1F35B914008C4271 /* UIView+Nibload.swift in Sources */,
 				8A47A1BD1F35CB45008C4271 /* String+Range.swift in Sources */,
 				8A47A1BA1F35CB03008C4271 /* UIColor+Hex.swift in Sources */,
@@ -569,6 +602,7 @@
 				8AB88ACD1F387215005DA815 /* UITableViewCell+ReusableCell.swift in Sources */,
 				8AB88AA51F385388005DA815 /* AuthViewController.swift in Sources */,
 				8AB88AA11F384D3C005DA815 /* Storyboards.swift in Sources */,
+				8AB88ADC1F387A89005DA815 /* DefaultTableHeaderView.swift in Sources */,
 				8AB88AB61F3862F0005DA815 /* UIColor+Brightness.swift in Sources */,
 				8AB88AD41F3876E9005DA815 /* TextViewPlateTableViewCell.swift in Sources */,
 				8AB88AB41F3862C4005DA815 /* ActionButton.swift in Sources */,
@@ -583,8 +617,10 @@
 				8AB88AC31F3870A1005DA815 /* CellViewAnyModel.swift in Sources */,
 				8AE792F01F3849DD00526845 /* AskIssueViewController.swift in Sources */,
 				8AB88ABF1F387034005DA815 /* TextFieldPlateTableViewCell.swift in Sources */,
+				8AB88AE21F387B45005DA815 /* UIHeaderFooterView+Reuse.swift in Sources */,
 				8A47A1B81F35CABD008C4271 /* UIColor+ColorsPalette.swift in Sources */,
 				8A47A1A01F3596D2008C4271 /* MainViewController.swift in Sources */,
+				8AB88ADF1F387AFA005DA815 /* UITableView+Reuse.swift in Sources */,
 				8A47A1A71F35B263008C4271 /* TipEntity.swift in Sources */,
 				8AB88ACA1F3871DC005DA815 /* UITableView+RegisterCells.swift in Sources */,
 				8AB88AC71F38710A005DA815 /* AskIssueViewModel.swift in Sources */,

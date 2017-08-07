@@ -47,15 +47,14 @@ class AskIssueViewController: UIViewController, UITableViewDelegate, UITableView
     return viewModel.height(for: indexPath)
   }
 
-  func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-    return viewModel.headerHeight(for: section)
-  }
+//  func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+//    return viewModel.headerHeight(for: section)
+//  }
 
-  func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-    let header = tableView.dequeueReusableHeaderFooterView() as DefaultTableHeaderView
-    header.headerLabel.text = viewModel.headerTitle(for: section)
-    return header
-  }
-
+//  func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+//    let header = tableView.dequeueReusableHeaderFooterView() as DefaultTableHeaderView
+//    header.headerLabel.text = viewModel.headerTitle(for: section)
+//    return header
+//  }
 
 }

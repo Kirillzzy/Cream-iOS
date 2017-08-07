@@ -57,8 +57,10 @@ class AuthViewController: UIViewController {
 
     if let login = login, let password = password,
       login != "", password != "" {
-      // TODO: - Implement Auth
-      UserDefaultsHelper.firstSetup = false
+      ApiManager.authorize(login: login, password: password, completion: {
+        UserDefaultsHelper.firstSetup = false
+        self.performSegue(withIdentifier: "FromAuthViewController", sender: self)
+      })
     }
   }
 }

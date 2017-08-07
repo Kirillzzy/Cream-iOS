@@ -256,11 +256,44 @@ extension AskIssueViewController: IdentifiableProtocol {
 
 
 //MARK: - AuthViewController
+extension UIStoryboardSegue {
+    func selection() -> AuthViewController.Segue? {
+        if let identifier = self.identifier {
+            return AuthViewController.Segue(rawValue: identifier)
+        }
+        return nil
+    }
+}
+
 extension AuthViewController: IdentifiableProtocol { 
     var storyboardIdentifier: String? { return "AuthViewController" }
     static var storyboardIdentifier: String? { return "AuthViewController" }
 }
 
+extension AuthViewController { 
+
+    enum Segue: String, CustomStringConvertible, SegueProtocol {
+        case FromAuthViewController = "FromAuthViewController"
+
+        var kind: SegueKind? {
+            switch (self) {
+            case .FromAuthViewController:
+                return SegueKind(rawValue: "show")
+            }
+        }
+
+        var destination: UIViewController.Type? {
+            switch (self) {
+            case .FromAuthViewController:
+                return NavigationViewController.self
+            }
+        }
+
+        var identifier: String? { return self.description } 
+        var description: String { return self.rawValue }
+    }
+
+}
 
 //MARK: - NavigationViewController
 extension NavigationViewController: IdentifiableProtocol { 

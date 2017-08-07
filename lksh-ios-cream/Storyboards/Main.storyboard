@@ -165,13 +165,13 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="305" height="38"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1b9-9c-xMs">
                                                 <rect key="frame" x="0.0" y="58" width="305" height="37.5"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gbt-ry-nT6" customClass="ActionButton" customModule="lksh_ios_cream" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="115.5" width="305" height="38"/>
@@ -181,7 +181,6 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="loginButtonAction:" destination="fVG-IP-iIG" eventType="touchUpInside" id="fF4-nu-b8i"/>
-                                                    <segue destination="rXq-Na-tT6" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="CW6-Sc-8gJ"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -232,7 +231,7 @@
                         <outlet property="passwordTextField" destination="1b9-9c-xMs" id="Jkb-Gx-tNR"/>
                         <outlet property="placeholderViewBottomConstraint" destination="p5N-bY-k1a" id="hH5-K3-2f4"/>
                         <outlet property="titleLabel" destination="f2d-Pp-MFy" id="2XZ-cM-Rpz"/>
-                        <segue destination="rXq-Na-tT6" kind="show" id="vH1-Ig-T4E"/>
+                        <segue destination="rXq-Na-tT6" kind="show" identifier="FromAuthViewController" id="vH1-Ig-T4E"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FFx-zk-Bud" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -265,7 +264,4 @@
         <image name="img_like" width="512" height="472"/>
         <image name="img_plus" width="25" height="25"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="CW6-Sc-8gJ"/>
-    </inferredMetricsTieBreakers>
 </document>

@@ -22,6 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         appDelegate.setRootViewController(with: "NavigationViewController")
       }
     }
+
     return true
   }
 

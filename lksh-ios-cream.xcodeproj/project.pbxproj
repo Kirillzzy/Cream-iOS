@@ -9,9 +9,7 @@
 /* Begin PBXBuildFile section */
 		8328AEC549406583850952D9 /* Pods_lksh_ios_cream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3E6C93BAC61FF18EC7F4E23 /* Pods_lksh_ios_cream.framework */; };
 		8A47A1891F359411008C4271 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A47A1881F359411008C4271 /* AppDelegate.swift */; };
-		8A47A18E1F359411008C4271 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A47A18C1F359411008C4271 /* Main.storyboard */; };
 		8A47A1901F359411008C4271 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A47A18F1F359411008C4271 /* Assets.xcassets */; };
-		8A47A1931F359411008C4271 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A47A1911F359411008C4271 /* LaunchScreen.storyboard */; };
 		8A47A1A01F3596D2008C4271 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A47A19F1F3596D2008C4271 /* MainViewController.swift */; };
 		8A47A1A71F35B263008C4271 /* TipEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A47A1A61F35B263008C4271 /* TipEntity.swift */; };
 		8A47A1AA1F35B8B9008C4271 /* TipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A47A1A91F35B8B9008C4271 /* TipView.swift */; };
@@ -21,6 +19,9 @@
 		8A47A1B81F35CABD008C4271 /* UIColor+ColorsPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A47A1B71F35CABD008C4271 /* UIColor+ColorsPalette.swift */; };
 		8A47A1BA1F35CB03008C4271 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A47A1B91F35CB03008C4271 /* UIColor+Hex.swift */; };
 		8A47A1BD1F35CB45008C4271 /* String+Range.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A47A1BC1F35CB45008C4271 /* String+Range.swift */; };
+		8AB88A9E1F384CED005DA815 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AB88A9C1F384CED005DA815 /* LaunchScreen.storyboard */; };
+		8AB88A9F1F384CED005DA815 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AB88A9D1F384CED005DA815 /* Main.storyboard */; };
+		8AB88AA11F384D3C005DA815 /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB88AA01F384D3C005DA815 /* Storyboards.swift */; };
 		8AE792F01F3849DD00526845 /* AskIssueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE792EF1F3849DD00526845 /* AskIssueViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,9 +30,7 @@
 		7A86BBCE0D4365D204C7CAF6 /* Pods-lksh-ios-cream.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lksh-ios-cream.release.xcconfig"; path = "Pods/Target Support Files/Pods-lksh-ios-cream/Pods-lksh-ios-cream.release.xcconfig"; sourceTree = "<group>"; };
 		8A47A1851F359411008C4271 /* lksh-ios-cream.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "lksh-ios-cream.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A47A1881F359411008C4271 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8A47A18D1F359411008C4271 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8A47A18F1F359411008C4271 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		8A47A1921F359411008C4271 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8A47A19F1F3596D2008C4271 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = ViewControllers/MainViewController.swift; sourceTree = "<group>"; };
 		8A47A1A11F3596D7008C4271 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Config/Info.plist; sourceTree = "<group>"; };
 		8A47A1A61F35B263008C4271 /* TipEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TipEntity.swift; path = Entities/TipEntity.swift; sourceTree = "<group>"; };
@@ -42,6 +41,9 @@
 		8A47A1B71F35CABD008C4271 /* UIColor+ColorsPalette.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+ColorsPalette.swift"; path = "Extensions/UIColor+ColorsPalette.swift"; sourceTree = "<group>"; };
 		8A47A1B91F35CB03008C4271 /* UIColor+Hex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+Hex.swift"; path = "Extensions/UIColor+Hex.swift"; sourceTree = "<group>"; };
 		8A47A1BC1F35CB45008C4271 /* String+Range.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+Range.swift"; path = "Extensions/String+Range.swift"; sourceTree = "<group>"; };
+		8AB88A9C1F384CED005DA815 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Storyboards/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8AB88A9D1F384CED005DA815 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Storyboards/Main.storyboard; sourceTree = "<group>"; };
+		8AB88AA01F384D3C005DA815 /* Storyboards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Storyboards.swift; path = Storyboards/Storyboards.swift; sourceTree = "<group>"; };
 		8AE792EF1F3849DD00526845 /* AskIssueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AskIssueViewController.swift; path = ViewControllers/AskIssueViewController.swift; sourceTree = "<group>"; };
 		D3E6C93BAC61FF18EC7F4E23 /* Pods_lksh_ios_cream.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_lksh_ios_cream.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -105,8 +107,8 @@
 		8A47A19A1F359436008C4271 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				8AB88AA01F384D3C005DA815 /* Storyboards.swift */,
 				8A47A1A41F35A720008C4271 /* Launch */,
-				8A47A18C1F359411008C4271 /* Main.storyboard */,
 			);
 			name = Storyboards;
 			sourceTree = "<group>";
@@ -127,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				8A47A19A1F359436008C4271 /* Storyboards */,
+				8AB88A9D1F384CED005DA815 /* Main.storyboard */,
 				8A47A19D1F35947B008C4271 /* Config */,
 				8A47A18F1F359411008C4271 /* Assets.xcassets */,
 			);
@@ -153,7 +156,7 @@
 		8A47A1A41F35A720008C4271 /* Launch */ = {
 			isa = PBXGroup;
 			children = (
-				8A47A1911F359411008C4271 /* LaunchScreen.storyboard */,
+				8AB88A9C1F384CED005DA815 /* LaunchScreen.storyboard */,
 			);
 			name = Launch;
 			sourceTree = "<group>";
@@ -249,6 +252,7 @@
 				8A47A1A31F3597A7008C4271 /* Swiftlint */,
 				52D6023FFDE81D3C7DCE2A56 /* [CP] Embed Pods Frameworks */,
 				7275A4A956E313F2FFEB3058 /* [CP] Copy Pods Resources */,
+				8AB88A9B1F384CA7005DA815 /* Natalie */,
 			);
 			buildRules = (
 			);
@@ -299,10 +303,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AB88A9E1F384CED005DA815 /* LaunchScreen.storyboard in Resources */,
 				8A47A1B11F35B9C8008C4271 /* TipView.xib in Resources */,
-				8A47A1931F359411008C4271 /* LaunchScreen.storyboard in Resources */,
 				8A47A1901F359411008C4271 /* Assets.xcassets in Resources */,
-				8A47A18E1F359411008C4271 /* Main.storyboard in Resources */,
+				8AB88A9F1F384CED005DA815 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,6 +357,20 @@
 			shellPath = /bin/sh;
 			shellScript = "SWIFTLINT = ${PODS_ROOT}/SwiftLint/swiftlint\nSWFITLINT_CONFIG = ${PROJECT_DIR}/\n\nif which SWIFTLINT >/dev/null; then\nSWIFTLINT lint --config .swiftlint.yml\nelse\necho \"error: SwiftLint does not exist, download it from https://github.com/realm/SwiftLint\"\nexit 1\nfi";
 		};
+		8AB88A9B1F384CA7005DA815 /* Natalie */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Natalie;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# По наличию/размеру CHMeetupApp.app в Derived Data определяется \"очищенность проекта\" и необходимость повторно исполнять Natalie. Возвращается Bool - является ли проект очищенным.\nCLEAN_CHECK=$PROJECT_DIR/Scripts/clean_check.sh\nif [ -e $CLEAN_CHECK ]; then\nisClean=\"$(bash $CLEAN_CHECK)\"\necho \"isClean: $isClean\"\nif [ $isClean -eq 0 ]; then # not clean\nexit\nfi\nelse\necho Scripts/clean_check.sh not found\nfi\n# Adjust path to \"natalie\" binary\n# NATALIE_PATH=\"$PROJECT_DIR/natalie\"\nNATALIE_PATH=\"/usr/local/bin/natalie\"\n\nif [ -f $NATALIE_PATH ]; then\nBASE_PATH=\"$PROJECT_DIR/$PROJECT_NAME\"\nOUTPUT_PATH=\"$BASE_PATH/Storyboards/Storyboards.swift\"\n\nif [ ! -e \"$OUTPUT_PATH\" ] || [ -n \"$(find \"$BASE_PATH\" -type f -name \"*.storyboard\" -newer \"$OUTPUT_PATH\" -print -quit)\" ]; then\necho \"Natalie Generator: Generated Swift is out-of-date; re-generating...\"\n\n/usr/bin/chflags nouchg \"$OUTPUT_PATH\"\n\"$NATALIE_PATH\" \"$BASE_PATH\" > \"$OUTPUT_PATH\"\n/usr/bin/chflags uchg \"$OUTPUT_PATH\"\n\necho \"Natalie Generator: Done.\"\nelse\necho \"Natalie Generator: Generated Swift is up-to-date; skipping re-generation.\"\nfi\nfi";
+		};
 		C9CAA126E140FB35FEF91273 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -379,6 +397,7 @@
 				8A47A1BD1F35CB45008C4271 /* String+Range.swift in Sources */,
 				8A47A1BA1F35CB03008C4271 /* UIColor+Hex.swift in Sources */,
 				8A47A1B41F35C475008C4271 /* UIFont+AppFonts.swift in Sources */,
+				8AB88AA11F384D3C005DA815 /* Storyboards.swift in Sources */,
 				8A47A1AA1F35B8B9008C4271 /* TipView.swift in Sources */,
 				8A47A1891F359411008C4271 /* AppDelegate.swift in Sources */,
 				8AE792F01F3849DD00526845 /* AskIssueViewController.swift in Sources */,
@@ -389,25 +408,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		8A47A18C1F359411008C4271 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8A47A18D1F359411008C4271 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		8A47A1911F359411008C4271 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8A47A1921F359411008C4271 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		8A47A1951F359411008C4271 /* Debug */ = {

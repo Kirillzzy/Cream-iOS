@@ -1,5 +1,6 @@
 excluded: # paths to ignore during linting.
   - Pods
+  - lksh-ios-cream/Storyboards/Storyboards.swift
 
 identifier_name:
   min_length: 2

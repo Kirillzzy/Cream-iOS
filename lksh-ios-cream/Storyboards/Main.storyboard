@@ -24,7 +24,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Пожелания ЛКШат" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YNg-bA-axa">
-                                <rect key="frame" x="52" y="36" width="271" height="40"/>
+                                <rect key="frame" x="56" y="36" width="263" height="40"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="23"/>
                                 <color key="textColor" red="0.98039215686274506" green="0.64313725490196072" blue="0.10196078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -49,23 +49,29 @@
                                     <action selector="likeButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hiE-f9-bhS"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8RD-Wn-ZId" customClass="KolodaView" customModule="Koloda">
-                                <rect key="frame" x="0.0" y="84" width="375" height="473.5"/>
-                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dm3-2Y-tsg">
-                                <rect key="frame" x="331" y="36" width="32" height="32"/>
+                                <rect key="frame" x="327" y="36" width="32" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Dm3-2Y-tsg" secondAttribute="height" multiplier="1:1" id="MiW-wa-0Gm"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="img_plus"/>
+                                <connections>
+                                    <action selector="plusButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EMV-ec-vz5"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AsR-4l-qZn">
-                                <rect key="frame" x="12" y="36" width="32" height="32"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AsR-4l-qZn">
+                                <rect key="frame" x="16" y="36" width="32" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="AsR-4l-qZn" secondAttribute="height" multiplier="1:1" id="ugS-Nf-0Nn"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Button" image="img_exit"/>
+                                <connections>
+                                    <action selector="exitButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Cmm-Bg-c2u"/>
+                                </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8RD-Wn-ZId" customClass="KolodaView" customModule="Koloda">
+                                <rect key="frame" x="0.0" y="84" width="375" height="473.5"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.94117647058823528" green="0.96078431372549022" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -83,18 +89,20 @@
                             <constraint firstItem="Q5I-Ro-F9u" firstAttribute="top" secondItem="8RD-Wn-ZId" secondAttribute="bottom" constant="25" id="Rpk-pS-76W"/>
                             <constraint firstItem="8RD-Wn-ZId" firstAttribute="top" secondItem="YNg-bA-axa" secondAttribute="bottom" constant="8" id="T26-qk-jpb"/>
                             <constraint firstItem="YNg-bA-axa" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="16" id="X4r-Db-6AD"/>
-                            <constraint firstItem="AsR-4l-qZn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="12" id="XPF-8b-msF"/>
+                            <constraint firstItem="AsR-4l-qZn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="XPF-8b-msF"/>
                             <constraint firstItem="Q5I-Ro-F9u" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" multiplier="1.35" id="YnP-Wz-0rO"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ufA-1B-n8r" secondAttribute="bottom" constant="35" id="fQW-rD-YhA"/>
                             <constraint firstItem="Dm3-2Y-tsg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="16" id="gjP-H2-fhV"/>
-                            <constraint firstAttribute="trailing" secondItem="Dm3-2Y-tsg" secondAttribute="trailing" constant="12" id="q60-sm-7jI"/>
+                            <constraint firstAttribute="trailing" secondItem="Dm3-2Y-tsg" secondAttribute="trailing" constant="16" id="q60-sm-7jI"/>
                             <constraint firstItem="8RD-Wn-ZId" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="riz-ed-mtO"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="dislikeButton" destination="ufA-1B-n8r" id="r7T-HB-Due"/>
+                        <outlet property="exitButton" destination="AsR-4l-qZn" id="eUd-Rg-e0M"/>
                         <outlet property="kolodaView" destination="8RD-Wn-ZId" id="3Pa-gW-3ri"/>
                         <outlet property="likeButton" destination="Q5I-Ro-F9u" id="r39-nH-ZCB"/>
+                        <outlet property="plusButton" destination="Dm3-2Y-tsg" id="OgT-uM-5Zl"/>
                         <outlet property="titleLabel" destination="YNg-bA-axa" id="R9v-pR-4BC"/>
                     </connections>
                 </viewController>
@@ -138,7 +146,8 @@
     </scenes>
     <resources>
         <image name="img_dislike" width="512" height="472"/>
+        <image name="img_exit" width="512" height="512"/>
         <image name="img_like" width="512" height="472"/>
-        <image name="img_plus" width="1600" height="1600"/>
+        <image name="img_plus" width="512" height="512"/>
     </resources>
 </document>

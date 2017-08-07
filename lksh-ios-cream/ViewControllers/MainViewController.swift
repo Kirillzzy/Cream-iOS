@@ -13,7 +13,7 @@ class MainViewController: UIViewController {
 
   @IBOutlet fileprivate var titleLabel: UILabel! {
     didSet {
-      titleLabel.font = UIFont.appFont(.avenirNextMedium(size: 23))
+      titleLabel.font = UIFont.appFont(.avenirNextDemiBold(size: 24))
     }
   }
   @IBOutlet fileprivate var kolodaView: KolodaView! {
@@ -29,6 +29,8 @@ class MainViewController: UIViewController {
       kolodaView.dataSource = self
     }
   }
+  @IBOutlet fileprivate var dislikeButton: UIButton!
+  @IBOutlet fileprivate var likeButton: UIButton!
 
   var modelCollection: [TipEntity] {
     // FIXME: Delete below after loading from internet
@@ -46,6 +48,13 @@ class MainViewController: UIViewController {
     // Do any additional setup after loading the view, typically from a nib.
   }
 
+  @IBAction fileprivate func dislikeButtonAction(_ sender: Any) {
+    kolodaView.swipe(.left)
+  }
+
+  @IBAction fileprivate func likeButtonAction(_ sender: Any) {
+    kolodaView.swipe(.right)
+  }
 }
 
 // MARK: - KolodaView

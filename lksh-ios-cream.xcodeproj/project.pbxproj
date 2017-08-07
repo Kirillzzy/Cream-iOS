@@ -28,6 +28,7 @@
 		8AB88AB01F385C31005DA815 /* UIViewController+KeyboardDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB88AAF1F385C31005DA815 /* UIViewController+KeyboardDelegate.swift */; };
 		8AB88AB41F3862C4005DA815 /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB88AB31F3862C4005DA815 /* ActionButton.swift */; };
 		8AB88AB61F3862F0005DA815 /* UIColor+Brightness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB88AB51F3862F0005DA815 /* UIColor+Brightness.swift */; };
+		8AB88AB91F3864F5005DA815 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB88AB81F3864F5005DA815 /* NavigationViewController.swift */; };
 		8AE792F01F3849DD00526845 /* AskIssueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE792EF1F3849DD00526845 /* AskIssueViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +57,7 @@
 		8AB88AAF1F385C31005DA815 /* UIViewController+KeyboardDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIViewController+KeyboardDelegate.swift"; path = "Extensions/UIViewController+KeyboardDelegate.swift"; sourceTree = "<group>"; };
 		8AB88AB31F3862C4005DA815 /* ActionButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActionButton.swift; path = Custom/ActionButton.swift; sourceTree = "<group>"; };
 		8AB88AB51F3862F0005DA815 /* UIColor+Brightness.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+Brightness.swift"; path = "Extensions/UIColor+Brightness.swift"; sourceTree = "<group>"; };
+		8AB88AB81F3864F5005DA815 /* NavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NavigationViewController.swift; path = ViewControllers/NavigationViewController.swift; sourceTree = "<group>"; };
 		8AE792EF1F3849DD00526845 /* AskIssueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AskIssueViewController.swift; path = ViewControllers/AskIssueViewController.swift; sourceTree = "<group>"; };
 		D3E6C93BAC61FF18EC7F4E23 /* Pods_lksh_ios_cream.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_lksh_ios_cream.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -160,6 +162,7 @@
 		8A47A19E1F35948A008C4271 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				8AB88AB71F3864E5005DA815 /* Base */,
 				8AB88AA61F38538C005DA815 /* Main */,
 				8AB88AA71F385396005DA815 /* AskIssue */,
 				8AB88AA81F3853A6005DA815 /* Auth */,
@@ -310,6 +313,14 @@
 				8AB88AB31F3862C4005DA815 /* ActionButton.swift */,
 			);
 			name = ActionButton;
+			sourceTree = "<group>";
+		};
+		8AB88AB71F3864E5005DA815 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				8AB88AB81F3864F5005DA815 /* NavigationViewController.swift */,
+			);
+			name = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -479,6 +490,7 @@
 				8AB88AAD1F385B90005DA815 /* KeyboardHandler.swift in Sources */,
 				8AB88AB01F385C31005DA815 /* UIViewController+KeyboardDelegate.swift in Sources */,
 				8A47A1AA1F35B8B9008C4271 /* TipView.swift in Sources */,
+				8AB88AB91F3864F5005DA815 /* NavigationViewController.swift in Sources */,
 				8A47A1891F359411008C4271 /* AppDelegate.swift in Sources */,
 				8AE792F01F3849DD00526845 /* AskIssueViewController.swift in Sources */,
 				8A47A1B81F35CABD008C4271 /* UIColor+ColorsPalette.swift in Sources */,

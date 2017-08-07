@@ -20,6 +20,7 @@ extension UIColor {
     case thinLightGray
     case pink
     case blue
+    case orange
   }
 
   convenience init(_ colorType: ColorType) {
@@ -44,6 +45,8 @@ extension UIColor {
       self.init(hexString: "C550DC")
     case .blue:
       self.init(hexString: "1AD6FD") //5AC8FB
+    case .orange:
+      self .init(hexString: "FAA41A")
     }
   }
 }

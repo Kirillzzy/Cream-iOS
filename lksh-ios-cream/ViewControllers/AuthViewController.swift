@@ -26,14 +26,13 @@ class AuthViewController: UIViewController {
   @IBOutlet fileprivate var passwordTextField: UITextField!
   @IBOutlet fileprivate var loginButton: ActionButton! {
     didSet {
-      loginButton.titleLabel?.font = UIFont.appFont(.avenirNextMedium(size: 17))
+      loginButton.titleLabel?.font = UIFont.appFont(.avenirNextMedium(size: 18))
       loginButton.setTitle("Войти".localized, for: .normal)
       loginButton.layer.masksToBounds = true
       loginButton.layer.cornerRadius = 5
     }
   }
   @IBOutlet var placeholderViewBottomConstraint: NSLayoutConstraint!
-  @IBOutlet var placeholderViewUpConstraint: NSLayoutConstraint!
   fileprivate var tapGesture: UITapGestureRecognizer!
 
   override func viewDidLoad() {
@@ -53,6 +52,12 @@ class AuthViewController: UIViewController {
   }
 
   @IBAction fileprivate func loginButtonAction(_ sender: Any) {
+    let login = loginTextField.text
+    let password = passwordTextField.text
+
+    if let login = login, let password = password {
+      // TODO: - Implement Auth
+    }
   }
 }
 
@@ -62,10 +67,8 @@ extension AuthViewController: KeyboardHandlerDelegate {
     switch state {
     case .opened:
       placeholderViewBottomConstraint.constant += info.endFrame.height
-      placeholderViewUpConstraint.constant -= info.endFrame.height
     case .hidden:
       placeholderViewBottomConstraint.constant -= info.endFrame.height
-      placeholderViewUpConstraint.constant += info.endFrame.height
     case .frameChanged: return
     }
   }

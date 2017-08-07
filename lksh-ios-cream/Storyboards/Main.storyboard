@@ -24,7 +24,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ufA-1B-n8r">
-                                <rect key="frame" x="95.5" y="578.5" width="53" height="53.5"/>
+                                <rect key="frame" x="108" y="593.5" width="28" height="28.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ufA-1B-n8r" secondAttribute="height" multiplier="1:1" id="7hh-Eo-wiL"/>
                                 </constraints>
@@ -34,7 +34,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q5I-Ro-F9u">
-                                <rect key="frame" x="226.5" y="578.5" width="53.5" height="53.5"/>
+                                <rect key="frame" x="234" y="583.5" width="38.5" height="38.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Q5I-Ro-F9u" secondAttribute="height" multiplier="1:1" id="qhF-DQ-RcB"/>
                                 </constraints>
@@ -49,20 +49,24 @@
                         </subviews>
                         <color key="backgroundColor" red="0.94117647058823528" green="0.96078431372549022" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Q5I-Ro-F9u" secondAttribute="bottom" constant="35" id="1Dr-BD-i87"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Q5I-Ro-F9u" secondAttribute="bottom" constant="45" id="1Dr-BD-i87"/>
                             <constraint firstAttribute="trailing" secondItem="8RD-Wn-ZId" secondAttribute="trailing" id="7Ug-Mi-qZj"/>
                             <constraint firstItem="ufA-1B-n8r" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" multiplier="0.65" id="CUp-qE-Qh4"/>
                             <constraint firstItem="8RD-Wn-ZId" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.71" id="Dzl-6O-zfe"/>
                             <constraint firstItem="8RD-Wn-ZId" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="16" id="KER-9a-BLY"/>
-                            <constraint firstItem="ufA-1B-n8r" firstAttribute="top" secondItem="8RD-Wn-ZId" secondAttribute="bottom" constant="25" id="PU8-Bs-oM6"/>
-                            <constraint firstItem="Q5I-Ro-F9u" firstAttribute="top" secondItem="8RD-Wn-ZId" secondAttribute="bottom" constant="25" id="Rpk-pS-76W"/>
+                            <constraint firstItem="ufA-1B-n8r" firstAttribute="top" secondItem="8RD-Wn-ZId" secondAttribute="bottom" constant="40" id="PU8-Bs-oM6"/>
+                            <constraint firstItem="Q5I-Ro-F9u" firstAttribute="top" secondItem="8RD-Wn-ZId" secondAttribute="bottom" constant="30" id="Rpk-pS-76W"/>
                             <constraint firstItem="Q5I-Ro-F9u" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" multiplier="1.35" id="YnP-Wz-0rO"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ufA-1B-n8r" secondAttribute="bottom" constant="35" id="fQW-rD-YhA"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ufA-1B-n8r" secondAttribute="bottom" constant="45" id="fQW-rD-YhA"/>
                             <constraint firstItem="8RD-Wn-ZId" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="riz-ed-mtO"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Пожелания ЛКШат" id="Vn5-pW-mbR">
-                        <barButtonItem key="leftBarButtonItem" image="img_exit" id="AAs-Nx-OhU"/>
+                        <barButtonItem key="leftBarButtonItem" image="img_exit" id="AAs-Nx-OhU">
+                            <connections>
+                                <segue destination="fVG-IP-iIG" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="20e-Sp-Cxq"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="img_plus" id="nes-JA-AQr">
                             <connections>
                                 <segue destination="bco-95-0md" kind="show" id="QPD-H0-lPk"/>
@@ -144,34 +148,35 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jgl-TU-td1">
-                                <rect key="frame" x="0.0" y="448" width="375" height="219"/>
+                                <rect key="frame" x="0.0" y="433.5" width="375" height="233.5"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_blur_view" translatesAutoresizingMaskIntoConstraints="NO" id="P8m-hb-UHo">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="219"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="233.5"/>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="PDC-00-gpI">
-                                        <rect key="frame" x="35" y="40" width="305" height="139"/>
+                                        <rect key="frame" x="35" y="40" width="305" height="153.5"/>
                                         <subviews>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Логин" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LoN-f9-mge">
-                                                <rect key="frame" x="0.0" y="0.0" width="305" height="33"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="305" height="37.5"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1b9-9c-xMs">
-                                                <rect key="frame" x="0.0" y="53" width="305" height="33"/>
+                                                <rect key="frame" x="0.0" y="57.5" width="305" height="38.5"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gbt-ry-nT6" customClass="ActionButton" customModule="lksh_ios_cream" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="106" width="305" height="33"/>
+                                                <rect key="frame" x="0.0" y="116" width="305" height="37.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <state key="normal" title="Войти">
                                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="loginButtonAction:" destination="fVG-IP-iIG" eventType="touchUpInside" id="fF4-nu-b8i"/>
+                                                    <segue destination="rXq-Na-tT6" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="CW6-Sc-8gJ"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -207,7 +212,7 @@
                             <constraint firstItem="fCY-Mo-Mvx" firstAttribute="height" secondItem="Pzf-Vt-W1l" secondAttribute="height" multiplier="0.17" id="dQk-FF-mpP"/>
                             <constraint firstItem="Jgl-TU-td1" firstAttribute="leading" secondItem="Sfd-K2-PQh" secondAttribute="leading" id="dXq-fj-Yds"/>
                             <constraint firstItem="h1u-sD-ZXR" firstAttribute="leading" secondItem="Sfd-K2-PQh" secondAttribute="leading" constant="8" id="etO-Av-cLE"/>
-                            <constraint firstItem="Jgl-TU-td1" firstAttribute="top" secondItem="h1u-sD-ZXR" secondAttribute="bottom" constant="170" id="hnh-yZ-GwD"/>
+                            <constraint firstItem="Jgl-TU-td1" firstAttribute="height" secondItem="Sfd-K2-PQh" secondAttribute="height" multiplier="0.35" id="gMK-if-kvJ"/>
                             <constraint firstItem="f2d-Pp-MFy" firstAttribute="top" secondItem="fCY-Mo-Mvx" secondAttribute="bottom" constant="16" id="hpi-ux-t7Y"/>
                             <constraint firstAttribute="trailing" secondItem="f2d-Pp-MFy" secondAttribute="trailing" constant="8" id="iYN-hr-5nC"/>
                             <constraint firstAttribute="trailing" secondItem="Jgl-TU-td1" secondAttribute="trailing" id="mGf-IC-CXz"/>
@@ -221,7 +226,6 @@
                         <outlet property="loginTextField" destination="LoN-f9-mge" id="NR7-UU-LaM"/>
                         <outlet property="passwordTextField" destination="1b9-9c-xMs" id="Jkb-Gx-tNR"/>
                         <outlet property="placeholderViewBottomConstraint" destination="p5N-bY-k1a" id="hH5-K3-2f4"/>
-                        <outlet property="placeholderViewUpConstraint" destination="hnh-yZ-GwD" id="UP8-h1-d4z"/>
                         <outlet property="titleLabel" destination="f2d-Pp-MFy" id="2XZ-cM-Rpz"/>
                         <segue destination="rXq-Na-tT6" kind="show" id="vH1-Ig-T4E"/>
                     </connections>
@@ -230,10 +234,10 @@
             </objects>
             <point key="canvasLocation" x="269.60000000000002" y="-575.26236881559225"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Navigation View Controller-->
         <scene sceneID="D5T-vl-Kuf">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rXq-Na-tT6" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rXq-Na-tT6" customClass="NavigationViewController" customModule="lksh_ios_cream" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="25u-Pp-yNC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -256,4 +260,7 @@
         <image name="img_like" width="512" height="472"/>
         <image name="img_plus" width="25" height="25"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="CW6-Sc-8gJ"/>
+    </inferredMetricsTieBreakers>
 </document>

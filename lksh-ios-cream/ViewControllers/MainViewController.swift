@@ -89,6 +89,7 @@ extension MainViewController: KolodaViewDelegate, KolodaViewDataSource {
     view.descriptionLabel.text = item.text
     view.nameLabel.text = item.creator
     view.rateLabel.text = "\(item.likes)"
+//    view.dateLabel.text = item.date
 
     return view
   }

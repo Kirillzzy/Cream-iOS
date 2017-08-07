@@ -231,7 +231,7 @@
                         <outlet property="passwordTextField" destination="1b9-9c-xMs" id="Jkb-Gx-tNR"/>
                         <outlet property="placeholderViewBottomConstraint" destination="p5N-bY-k1a" id="hH5-K3-2f4"/>
                         <outlet property="titleLabel" destination="f2d-Pp-MFy" id="2XZ-cM-Rpz"/>
-                        <segue destination="rXq-Na-tT6" kind="show" identifier="FromAuthViewController" id="vH1-Ig-T4E"/>
+                        <segue destination="rXq-Na-tT6" kind="presentation" identifier="FromAuthViewController" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="7fg-hj-zps"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FFx-zk-Bud" userLabel="First Responder" sceneMemberID="firstResponder"/>

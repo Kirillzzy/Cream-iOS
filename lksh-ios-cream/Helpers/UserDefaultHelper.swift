@@ -13,6 +13,7 @@ final class UserDefaultsHelper {
 
   enum Keys {
     fileprivate static let firstSetup = "FirstSetup"
+    fileprivate static let token = "Token"
   }
 
   static var firstSetup: Bool {
@@ -26,5 +27,13 @@ final class UserDefaultsHelper {
       defaults.set(!newValue, forKey: Keys.firstSetup)
     }
   }
-  
+
+  static var token: String {
+    get {
+      return defaults.string(forKey: Keys.token) ?? ""
+    }
+    set {
+      defaults.set(newValue, forKey: Keys.token)
+    }
+  }
 }

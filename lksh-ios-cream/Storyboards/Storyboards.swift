@@ -278,7 +278,7 @@ extension AuthViewController {
         var kind: SegueKind? {
             switch (self) {
             case .FromAuthViewController:
-                return SegueKind(rawValue: "show")
+                return SegueKind(rawValue: "presentation")
             }
         }
 

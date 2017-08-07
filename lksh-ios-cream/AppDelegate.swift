@@ -23,6 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       }
     }
 
+    ApiManager.sendProblem(title: "Hello", description: "You was hacked")
     return true
   }
 

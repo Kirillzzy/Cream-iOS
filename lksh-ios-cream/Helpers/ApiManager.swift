@@ -17,7 +17,7 @@ final class ApiManager {
                                         encoding: ParameterEncoding = JSONEncoding.default,
                                         completion: @escaping (_ json: JSON) -> Void) {
     guard Reachability.isInternetAvailable else { return }
-    Alamofire.request(Constants.Server.apiBase + addString, method: method, parameters: parameters!,
+    Alamofire.request(Constants.Server.apiBase + addString, method: method, parameters: parameters,
                       encoding: encoding).responseJSON(completionHandler: { response in
                         switch response.result {
                         case .success:
@@ -30,8 +30,6 @@ final class ApiManager {
                       })
   }
 
-  private static var token: String = ""
-
   static func authorize(login: String, password: String, completion: @escaping (() -> Void)) {
     let parameters: Parameters = [
       "username": login,
@@ -40,17 +38,26 @@ final class ApiManager {
     apiManagerService(addString: "api-login/", method: .post,
                       parameters: parameters, encoding: URLEncoding.httpBody,
                       completion: { json in
-                        self.token = json["token"].stringValue
+                        UserDefaultsHelper.token = json["token"].stringValue
                         completion()
     })
   }
 
-  static func getPosts(completion: @escaping (([TipEntity]) -> Void)) {
+  static func getPosts(roomPin: String = "0", completion: @escaping (([TipEntity]) -> Void)) {
+    apiManagerService(addString: "problems/?jwt=\(UserDefaultsHelper.token)&room_pin=\(roomPin)",
+      encoding: URLEncoding.httpBody,
+      completion: { json in
+        print(json)
+    })
+  }
+
+  static func sendProblem(title: String, description: String) {
     let parameters: Parameters = [
-      //swiftlint:disable:next line_length
-      "jwt": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MzM2NDkyNzEsImVtYWlsIjoic2FzaGFAYmFzaGtvcnQub3JnIiwidXNlcl9pZCI6MSwidXNlcm5hbWUiOiJtZXJsaW4ifQ.AZs8cvZ_4t9dd2N0DPgS_rIKFn9vr-n9TnSwCOgB8MM"
+      "title": title,
+      "description": description,
+      "jwt": UserDefaultsHelper.token
     ]
-    apiManagerService(addString: "problems/", method: .get,
+    apiManagerService(addString: "problems/", method: .post,
                       parameters: parameters, encoding: URLEncoding.httpBody,
                       completion: { json in
                         print(json)

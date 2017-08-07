@@ -47,6 +47,9 @@
 		8AB88ADF1F387AFA005DA815 /* UITableView+Reuse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB88ADE1F387AF9005DA815 /* UITableView+Reuse.swift */; };
 		8AB88AE21F387B45005DA815 /* UIHeaderFooterView+Reuse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB88AE11F387B45005DA815 /* UIHeaderFooterView+Reuse.swift */; };
 		8AB88AE41F387BBB005DA815 /* UITableView+CellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB88AE31F387BBB005DA815 /* UITableView+CellViewModel.swift */; };
+		8AB88AE71F387F43005DA815 /* BottomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB88AE61F387F43005DA815 /* BottomButton.swift */; };
+		8AB88AE91F387F81005DA815 /* UIView+Anchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB88AE81F387F81005DA815 /* UIView+Anchor.swift */; };
+		8AB88AEB1F38801A005DA815 /* UITableView+BottomInset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB88AEA1F38801A005DA815 /* UITableView+BottomInset.swift */; };
 		8AE792F01F3849DD00526845 /* AskIssueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE792EF1F3849DD00526845 /* AskIssueViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -94,6 +97,9 @@
 		8AB88ADE1F387AF9005DA815 /* UITableView+Reuse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UITableView+Reuse.swift"; path = "Extensions/UITableView+Reuse.swift"; sourceTree = "<group>"; };
 		8AB88AE11F387B45005DA815 /* UIHeaderFooterView+Reuse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIHeaderFooterView+Reuse.swift"; path = "Extensions/UIHeaderFooterView+Reuse.swift"; sourceTree = "<group>"; };
 		8AB88AE31F387BBB005DA815 /* UITableView+CellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UITableView+CellViewModel.swift"; path = "Extensions/UITableView+CellViewModel.swift"; sourceTree = "<group>"; };
+		8AB88AE61F387F43005DA815 /* BottomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BottomButton.swift; path = Custom/BottomButton.swift; sourceTree = "<group>"; };
+		8AB88AE81F387F81005DA815 /* UIView+Anchor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+Anchor.swift"; path = "Extensions/UIView+Anchor.swift"; sourceTree = "<group>"; };
+		8AB88AEA1F38801A005DA815 /* UITableView+BottomInset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UITableView+BottomInset.swift"; path = "Extensions/UITableView+BottomInset.swift"; sourceTree = "<group>"; };
 		8AE792EF1F3849DD00526845 /* AskIssueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AskIssueViewController.swift; path = ViewControllers/AskIssueViewController.swift; sourceTree = "<group>"; };
 		D3E6C93BAC61FF18EC7F4E23 /* Pods_lksh_ios_cream.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_lksh_ios_cream.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -269,6 +275,7 @@
 			isa = PBXGroup;
 			children = (
 				8A47A1AC1F35B914008C4271 /* UIView+Nibload.swift */,
+				8AB88AE81F387F81005DA815 /* UIView+Anchor.swift */,
 			);
 			name = UIView;
 			sourceTree = "<group>";
@@ -348,6 +355,7 @@
 		8AB88AB11F3862AD005DA815 /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
+				8AB88AE51F387F31005DA815 /* BottomButton */,
 				8AB88AB21F3862B6005DA815 /* ActionButton */,
 			);
 			name = Buttons;
@@ -394,6 +402,7 @@
 				8AB88AC91F3871DC005DA815 /* UITableView+RegisterCells.swift */,
 				8AB88ADE1F387AF9005DA815 /* UITableView+Reuse.swift */,
 				8AB88AE31F387BBB005DA815 /* UITableView+CellViewModel.swift */,
+				8AB88AEA1F38801A005DA815 /* UITableView+BottomInset.swift */,
 			);
 			name = UITableView;
 			sourceTree = "<group>";
@@ -431,6 +440,14 @@
 				8AB88AE11F387B45005DA815 /* UIHeaderFooterView+Reuse.swift */,
 			);
 			name = UITableViewHeaderFooterView;
+			sourceTree = "<group>";
+		};
+		8AB88AE51F387F31005DA815 /* BottomButton */ = {
+			isa = PBXGroup;
+			children = (
+				8AB88AE61F387F43005DA815 /* BottomButton.swift */,
+			);
+			name = BottomButton;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -591,6 +608,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AB88AE71F387F43005DA815 /* BottomButton.swift in Sources */,
 				8AB88AAA1F385986005DA815 /* String+Localize.swift in Sources */,
 				8AB88AE41F387BBB005DA815 /* UITableView+CellViewModel.swift in Sources */,
 				8A47A1AD1F35B914008C4271 /* UIView+Nibload.swift in Sources */,
@@ -599,12 +617,14 @@
 				8AB88AC51F3870C3005DA815 /* DisplayCollection.swift in Sources */,
 				8AB88AC11F387034005DA815 /* TextFieldPlateTableViewCellModel.swift in Sources */,
 				8A47A1B41F35C475008C4271 /* UIFont+AppFonts.swift in Sources */,
+				8AB88AE91F387F81005DA815 /* UIView+Anchor.swift in Sources */,
 				8AB88ACD1F387215005DA815 /* UITableViewCell+ReusableCell.swift in Sources */,
 				8AB88AA51F385388005DA815 /* AuthViewController.swift in Sources */,
 				8AB88AA11F384D3C005DA815 /* Storyboards.swift in Sources */,
 				8AB88ADC1F387A89005DA815 /* DefaultTableHeaderView.swift in Sources */,
 				8AB88AB61F3862F0005DA815 /* UIColor+Brightness.swift in Sources */,
 				8AB88AD41F3876E9005DA815 /* TextViewPlateTableViewCell.swift in Sources */,
+				8AB88AEB1F38801A005DA815 /* UITableView+BottomInset.swift in Sources */,
 				8AB88AB41F3862C4005DA815 /* ActionButton.swift in Sources */,
 				8AB88ACF1F387248005DA815 /* ReusableCell.swift in Sources */,
 				8AB88AD61F3876E9005DA815 /* TextViewPlateTableViewCellModel.swift in Sources */,

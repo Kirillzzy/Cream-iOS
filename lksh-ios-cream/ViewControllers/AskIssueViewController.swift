@@ -17,12 +17,19 @@ class AskIssueViewController: UIViewController, UITableViewDelegate, UITableView
   }
 
   var viewModel: AskIssueViewModel!
+  var bottomButton: BottomButton!
 
   override func viewDidLoad() {
     super.viewDidLoad()
     viewModel = AskIssueViewModel()
     tableView.registerNibs(from: viewModel)
+    keyboardDelegate = self
 
+    bottomButton = BottomButton(addingOnView: view, title: "Отправить".localized)
+    bottomButton.addTarget(self, action: #selector(sendProblem), for: .touchUpInside)
+  }
+
+  func sendProblem() {
   }
 
   func dismissKeyboard() {
@@ -57,4 +64,34 @@ class AskIssueViewController: UIViewController, UITableViewDelegate, UITableView
 //    return header
 //  }
 
+}
+
+// MARK: - KeyboardHandlerDelegate
+extension AskIssueViewController: KeyboardHandlerDelegate {
+  func keyboardStateChanged(input: UIView?, state: KeyboardState, info: KeyboardInfo) {
+
+    var scrollViewContentInsets = tableView.contentInset
+    var indicatorInsets = tableView.scrollIndicatorInsets
+    var buttonInsets: CGFloat = 0
+
+    switch state {
+    case .frameChanged, .opened:
+      let scrollViewBottomInset = info.endFrame.height + tableView.defaultBottomInset + bottomButton.frame.height
+      scrollViewContentInsets.bottom = scrollViewBottomInset
+      indicatorInsets.bottom = info.endFrame.height + bottomButton.frame.height
+      buttonInsets = info.endFrame.height
+    case .hidden:
+      scrollViewContentInsets.bottom = 0
+      indicatorInsets.bottom = 0
+      buttonInsets = 0
+    }
+
+    tableView.contentInset = scrollViewContentInsets
+    tableView.scrollIndicatorInsets = indicatorInsets
+
+    bottomButton.bottomInsetsConstant = buttonInsets
+    info.animate ({ [weak self] in
+      self?.view.layoutIfNeeded()
+    })
+  }
 }

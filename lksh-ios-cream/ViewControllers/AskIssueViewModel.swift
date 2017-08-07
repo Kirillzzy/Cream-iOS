@@ -33,7 +33,7 @@ class AskIssueViewModel: NSObject, DisplayCollection {
     switch type {
     case .title:
       return TextFieldPlateTableViewCellModel(value: titleText,
-                                              placeholder: "Заголовок".localized,
+                                              placeholder: "Введите заголовок".localized,
                                               textFieldDelegate: self,
                                               valueChanged: { [weak self] value in
                                                 self?.titleText = value
@@ -56,7 +56,7 @@ class AskIssueViewModel: NSObject, DisplayCollection {
   func height(for indexPath: IndexPath) -> CGFloat {
     switch sections[indexPath.section] {
     case .title:
-      return UITableViewAutomaticDimension
+      return 55
     case .description:
       return 175
     }
@@ -75,6 +75,12 @@ class AskIssueViewModel: NSObject, DisplayCollection {
       return "Заголовок".localized
     case .description:
       return "Описание".localized
+    }
+  }
+
+  func bottomButtonAction() {
+    if titleText != "", descriptionText != "" {
+      // TODO: - Implement this
     }
   }
 

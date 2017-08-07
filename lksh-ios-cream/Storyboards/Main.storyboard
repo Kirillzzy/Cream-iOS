@@ -14,7 +14,7 @@
         <!--Пожелания ЛКШат-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="lksh_ios_cream" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="MainViewController" customModule="lksh_ios_cream" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -64,6 +64,7 @@
                     <navigationItem key="navigationItem" title="Пожелания ЛКШат" id="Vn5-pW-mbR">
                         <barButtonItem key="leftBarButtonItem" image="img_exit" id="AAs-Nx-OhU">
                             <connections>
+                                <action selector="exitButtonAction:" destination="BYZ-38-t0r" id="AEb-sG-40l"/>
                                 <segue destination="fVG-IP-iIG" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="20e-Sp-Cxq"/>
                             </connections>
                         </barButtonItem>
@@ -84,7 +85,7 @@
         <!--Добавить Пожелание-->
         <scene sceneID="dWP-wH-XVt">
             <objects>
-                <viewController title="Добавить Пожелание" id="bco-95-0md" customClass="AskIssueViewController" customModule="lksh_ios_cream" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AskIssueViewController" title="Добавить Пожелание" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bco-95-0md" customClass="AskIssueViewController" customModule="lksh_ios_cream" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2Yw-Xk-MeI"/>
                         <viewControllerLayoutGuide type="bottom" id="eee-FB-R68"/>
@@ -93,7 +94,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="v23-60-7ct">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="v23-60-7ct">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <connections>
@@ -121,7 +122,7 @@
         <!--Auth View Controller-->
         <scene sceneID="bol-Jh-U5a">
             <objects>
-                <viewController id="fVG-IP-iIG" customClass="AuthViewController" customModule="lksh_ios_cream" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AuthViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fVG-IP-iIG" customClass="AuthViewController" customModule="lksh_ios_cream" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Kfe-Fb-Wov"/>
                         <viewControllerLayoutGuide type="bottom" id="9hI-nn-Uma"/>
@@ -161,19 +162,19 @@
                                         <rect key="frame" x="35" y="40" width="305" height="153.5"/>
                                         <subviews>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Логин" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LoN-f9-mge">
-                                                <rect key="frame" x="0.0" y="0.0" width="305" height="37.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="305" height="38"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1b9-9c-xMs">
-                                                <rect key="frame" x="0.0" y="57.5" width="305" height="38.5"/>
+                                                <rect key="frame" x="0.0" y="58" width="305" height="37.5"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gbt-ry-nT6" customClass="ActionButton" customModule="lksh_ios_cream" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="116" width="305" height="37.5"/>
+                                                <rect key="frame" x="0.0" y="115.5" width="305" height="38"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <state key="normal" title="Войти">
                                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -241,7 +242,7 @@
         <!--Navigation View Controller-->
         <scene sceneID="D5T-vl-Kuf">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rXq-Na-tT6" customClass="NavigationViewController" customModule="lksh_ios_cream" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="NavigationViewController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="rXq-Na-tT6" customClass="NavigationViewController" customModule="lksh_ios_cream" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="25u-Pp-yNC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>

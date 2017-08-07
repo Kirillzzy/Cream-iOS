@@ -53,6 +53,10 @@ class MainViewController: UIViewController {
   @IBAction fileprivate func likeButtonAction(_ sender: Any) {
     kolodaView.swipe(.right)
   }
+  @IBAction fileprivate func exitButtonAction(_ sender: Any) {
+    // TODO - Implement Exit
+    UserDefaultsHelper.firstSetup = true
+  }
 
 }
 

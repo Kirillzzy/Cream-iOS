@@ -15,9 +15,9 @@ class AskIssueViewController: UIViewController, UITableViewDelegate, UITableView
       tableView.registerHeaderNib(for: DefaultTableHeaderView.self)
     }
   }
-
-  var viewModel: AskIssueViewModel!
-  var bottomButton: BottomButton!
+  fileprivate var tapGesture: UITapGestureRecognizer!
+  fileprivate var viewModel: AskIssueViewModel!
+  fileprivate var bottomButton: BottomButton!
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -26,14 +26,14 @@ class AskIssueViewController: UIViewController, UITableViewDelegate, UITableView
     keyboardDelegate = self
 
     bottomButton = BottomButton(addingOnView: view, title: "Отправить".localized)
-    bottomButton.addTarget(self, action: #selector(sendProblem), for: .touchUpInside)
+    bottomButton.addTarget(self, action: #selector(bottomButtonAction), for: .touchUpInside)
+
+    tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTapGesture(_:)))
+    view.addGestureRecognizer(tapGesture)
   }
 
-  func sendProblem() {
-  }
-
-  func dismissKeyboard() {
-    view.endEditing(true)
+  func bottomButtonAction() {
+    viewModel.bottomButtonAction()
   }
 
   func numberOfSections(in tableView: UITableView) -> Int {
@@ -64,6 +64,13 @@ class AskIssueViewController: UIViewController, UITableViewDelegate, UITableView
     return header
   }
 
+  @objc fileprivate func handleTapGesture(_ sender: UITapGestureRecognizer) {
+    dismissKeyboard()
+  }
+
+  fileprivate func dismissKeyboard() {
+    view.endEditing(true)
+  }
 }
 
 // MARK: - KeyboardHandlerDelegate

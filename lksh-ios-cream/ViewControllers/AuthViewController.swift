@@ -55,8 +55,10 @@ class AuthViewController: UIViewController {
     let login = loginTextField.text
     let password = passwordTextField.text
 
-    if let login = login, let password = password {
+    if let login = login, let password = password,
+      login != "", password != "" {
       // TODO: - Implement Auth
+      UserDefaultsHelper.firstSetup = false
     }
   }
 }

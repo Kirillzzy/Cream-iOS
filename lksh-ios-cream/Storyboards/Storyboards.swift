@@ -64,6 +64,22 @@ struct Storyboards {
         static func instantiateViewController<T: UIViewController>(ofType type: T.Type) -> T? where T: IdentifiableProtocol {
             return self.storyboard.instantiateViewController(ofType: type)
         }
+
+        static func instantiateMainViewController() -> MainViewController {
+            return self.storyboard.instantiateViewController(withIdentifier: "MainViewController") as! MainViewController
+        }
+
+        static func instantiateAskIssueViewController() -> AskIssueViewController {
+            return self.storyboard.instantiateViewController(withIdentifier: "AskIssueViewController") as! AskIssueViewController
+        }
+
+        static func instantiateAuthViewController() -> AuthViewController {
+            return self.storyboard.instantiateViewController(withIdentifier: "AuthViewController") as! AuthViewController
+        }
+
+        static func instantiateNavigationViewController() -> NavigationViewController {
+            return self.storyboard.instantiateViewController(withIdentifier: "NavigationViewController") as! NavigationViewController
+        }
     }
 }
 
@@ -226,10 +242,30 @@ extension UITableView {
 
 
 //MARK: - MainViewController
+extension MainViewController: IdentifiableProtocol { 
+    var storyboardIdentifier: String? { return "MainViewController" }
+    static var storyboardIdentifier: String? { return "MainViewController" }
+}
+
 
 //MARK: - AskIssueViewController
+extension AskIssueViewController: IdentifiableProtocol { 
+    var storyboardIdentifier: String? { return "AskIssueViewController" }
+    static var storyboardIdentifier: String? { return "AskIssueViewController" }
+}
+
 
 //MARK: - AuthViewController
+extension AuthViewController: IdentifiableProtocol { 
+    var storyboardIdentifier: String? { return "AuthViewController" }
+    static var storyboardIdentifier: String? { return "AuthViewController" }
+}
+
 
 //MARK: - NavigationViewController
+extension NavigationViewController: IdentifiableProtocol { 
+    var storyboardIdentifier: String? { return "NavigationViewController" }
+    static var storyboardIdentifier: String? { return "NavigationViewController" }
+}
+
 

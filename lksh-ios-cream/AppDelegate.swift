@@ -15,8 +15,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   func application(_ application: UIApplication,
                    didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-    // Override point for customization after application launch.
+    if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
+      if UserDefaultsHelper.firstSetup {
+        appDelegate.setRootViewController(with: "AuthViewController")
+      } else {
+        appDelegate.setRootViewController(with: "NavigationViewController")
+      }
+    }
     return true
+  }
+
+  func setRootViewController(with identifier: String, storyboard: String = "Main") {
+    self.window?.rootViewController = UIStoryboard(name: storyboard,
+                                                   bundle: nil).instantiateViewController(withIdentifier: identifier)
+  }
+
+  func setRootViewController(_ viewController: UIViewController) {
+    self.window?.rootViewController = viewController
   }
 
 }

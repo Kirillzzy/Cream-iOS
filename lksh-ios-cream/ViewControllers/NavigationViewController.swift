@@ -18,4 +18,8 @@ class NavigationViewController: UINavigationController {
     navigationBar.tintColor = UIColor(.black)
   }
 
+  override func pushViewController(_ viewController: UIViewController, animated: Bool) {
+    viewControllers.last?.makeBackButtonEmpty()
+    super.pushViewController(viewController, animated: animated)
+  }
 }

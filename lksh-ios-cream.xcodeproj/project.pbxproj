@@ -51,6 +51,7 @@
 		8AB88AE91F387F81005DA815 /* UIView+Anchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB88AE81F387F81005DA815 /* UIView+Anchor.swift */; };
 		8AB88AEB1F38801A005DA815 /* UITableView+BottomInset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB88AEA1F38801A005DA815 /* UITableView+BottomInset.swift */; };
 		8AB88AED1F388CB6005DA815 /* UserDefaultHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB88AEC1F388CB6005DA815 /* UserDefaultHelper.swift */; };
+		8AB88AEF1F388EBB005DA815 /* UIViewController+NavigationBarItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB88AEE1F388EBB005DA815 /* UIViewController+NavigationBarItems.swift */; };
 		8AE792F01F3849DD00526845 /* AskIssueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE792EF1F3849DD00526845 /* AskIssueViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -102,6 +103,7 @@
 		8AB88AE81F387F81005DA815 /* UIView+Anchor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+Anchor.swift"; path = "Extensions/UIView+Anchor.swift"; sourceTree = "<group>"; };
 		8AB88AEA1F38801A005DA815 /* UITableView+BottomInset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UITableView+BottomInset.swift"; path = "Extensions/UITableView+BottomInset.swift"; sourceTree = "<group>"; };
 		8AB88AEC1F388CB6005DA815 /* UserDefaultHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserDefaultHelper.swift; path = Helpers/UserDefaultHelper.swift; sourceTree = "<group>"; };
+		8AB88AEE1F388EBB005DA815 /* UIViewController+NavigationBarItems.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIViewController+NavigationBarItems.swift"; path = "Extensions/UIViewController+NavigationBarItems.swift"; sourceTree = "<group>"; };
 		8AE792EF1F3849DD00526845 /* AskIssueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AskIssueViewController.swift; path = ViewControllers/AskIssueViewController.swift; sourceTree = "<group>"; };
 		D3E6C93BAC61FF18EC7F4E23 /* Pods_lksh_ios_cream.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_lksh_ios_cream.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -351,6 +353,7 @@
 			isa = PBXGroup;
 			children = (
 				8AB88AAF1F385C31005DA815 /* UIViewController+KeyboardDelegate.swift */,
+				8AB88AEE1F388EBB005DA815 /* UIViewController+NavigationBarItems.swift */,
 			);
 			name = UIViewController;
 			sourceTree = "<group>";
@@ -626,6 +629,7 @@
 				8AB88AA11F384D3C005DA815 /* Storyboards.swift in Sources */,
 				8AB88ADC1F387A89005DA815 /* DefaultTableHeaderView.swift in Sources */,
 				8AB88AB61F3862F0005DA815 /* UIColor+Brightness.swift in Sources */,
+				8AB88AEF1F388EBB005DA815 /* UIViewController+NavigationBarItems.swift in Sources */,
 				8AB88AD41F3876E9005DA815 /* TextViewPlateTableViewCell.swift in Sources */,
 				8AB88AEB1F38801A005DA815 /* UITableView+BottomInset.swift in Sources */,
 				8AB88AED1F388CB6005DA815 /* UserDefaultHelper.swift in Sources */,

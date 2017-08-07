@@ -53,8 +53,8 @@ struct Storyboards {
             return UIStoryboard(name: self.identifier, bundle: nil)
         }
 
-        static func instantiateInitialViewController() -> MainViewController {
-            return self.storyboard.instantiateInitialViewController() as! MainViewController
+        static func instantiateInitialViewController() -> AuthViewController {
+            return self.storyboard.instantiateInitialViewController() as! AuthViewController
         }
 
         static func instantiateViewController(withIdentifier: String) -> UIViewController {
@@ -228,4 +228,6 @@ extension UITableView {
 //MARK: - MainViewController
 
 //MARK: - AskIssueViewController
+
+//MARK: - AuthViewController
 

@@ -20,8 +20,11 @@
 		8A47A1BA1F35CB03008C4271 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A47A1B91F35CB03008C4271 /* UIColor+Hex.swift */; };
 		8A47A1BD1F35CB45008C4271 /* String+Range.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A47A1BC1F35CB45008C4271 /* String+Range.swift */; };
 		8AB88A9E1F384CED005DA815 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AB88A9C1F384CED005DA815 /* LaunchScreen.storyboard */; };
-		8AB88A9F1F384CED005DA815 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AB88A9D1F384CED005DA815 /* Main.storyboard */; };
 		8AB88AA11F384D3C005DA815 /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB88AA01F384D3C005DA815 /* Storyboards.swift */; };
+		8AB88AA31F384F2B005DA815 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AB88AA21F384F2B005DA815 /* Main.storyboard */; };
+		8AB88AA51F385388005DA815 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB88AA41F385388005DA815 /* AuthViewController.swift */; };
+		8AB88AAA1F385986005DA815 /* String+Localize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB88AA91F385986005DA815 /* String+Localize.swift */; };
+		8AB88AAD1F385B90005DA815 /* KeyboardHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB88AAC1F385B90005DA815 /* KeyboardHandler.swift */; };
 		8AE792F01F3849DD00526845 /* AskIssueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE792EF1F3849DD00526845 /* AskIssueViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -42,8 +45,11 @@
 		8A47A1B91F35CB03008C4271 /* UIColor+Hex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+Hex.swift"; path = "Extensions/UIColor+Hex.swift"; sourceTree = "<group>"; };
 		8A47A1BC1F35CB45008C4271 /* String+Range.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+Range.swift"; path = "Extensions/String+Range.swift"; sourceTree = "<group>"; };
 		8AB88A9C1F384CED005DA815 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Storyboards/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		8AB88A9D1F384CED005DA815 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Storyboards/Main.storyboard; sourceTree = "<group>"; };
 		8AB88AA01F384D3C005DA815 /* Storyboards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Storyboards.swift; path = Storyboards/Storyboards.swift; sourceTree = "<group>"; };
+		8AB88AA21F384F2B005DA815 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Storyboards/Main.storyboard; sourceTree = "<group>"; };
+		8AB88AA41F385388005DA815 /* AuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthViewController.swift; path = ViewControllers/AuthViewController.swift; sourceTree = "<group>"; };
+		8AB88AA91F385986005DA815 /* String+Localize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+Localize.swift"; path = "Extensions/String+Localize.swift"; sourceTree = "<group>"; };
+		8AB88AAC1F385B90005DA815 /* KeyboardHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KeyboardHandler.swift; path = Helpers/KeyboardHandler.swift; sourceTree = "<group>"; };
 		8AE792EF1F3849DD00526845 /* AskIssueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AskIssueViewController.swift; path = ViewControllers/AskIssueViewController.swift; sourceTree = "<group>"; };
 		D3E6C93BAC61FF18EC7F4E23 /* Pods_lksh_ios_cream.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_lksh_ios_cream.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -109,6 +115,7 @@
 			children = (
 				8AB88AA01F384D3C005DA815 /* Storyboards.swift */,
 				8A47A1A41F35A720008C4271 /* Launch */,
+				8AB88AA21F384F2B005DA815 /* Main.storyboard */,
 			);
 			name = Storyboards;
 			sourceTree = "<group>";
@@ -120,6 +127,7 @@
 				8A47A19E1F35948A008C4271 /* ViewControllers */,
 				8A47A1A51F35AE81008C4271 /* Entities */,
 				8A47A1A81F35B832008C4271 /* Custom */,
+				8AB88AAB1F385B7D005DA815 /* Helpers */,
 				8A47A1AB1F35B8F5008C4271 /* Extenstions */,
 			);
 			name = Sources;
@@ -129,7 +137,6 @@
 			isa = PBXGroup;
 			children = (
 				8A47A19A1F359436008C4271 /* Storyboards */,
-				8AB88A9D1F384CED005DA815 /* Main.storyboard */,
 				8A47A19D1F35947B008C4271 /* Config */,
 				8A47A18F1F359411008C4271 /* Assets.xcassets */,
 			);
@@ -147,8 +154,9 @@
 		8A47A19E1F35948A008C4271 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				8A47A19F1F3596D2008C4271 /* MainViewController.swift */,
-				8AE792EF1F3849DD00526845 /* AskIssueViewController.swift */,
+				8AB88AA61F38538C005DA815 /* Main */,
+				8AB88AA71F385396005DA815 /* AskIssue */,
+				8AB88AA81F3853A6005DA815 /* Auth */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -234,8 +242,41 @@
 			isa = PBXGroup;
 			children = (
 				8A47A1BC1F35CB45008C4271 /* String+Range.swift */,
+				8AB88AA91F385986005DA815 /* String+Localize.swift */,
 			);
 			name = String;
+			sourceTree = "<group>";
+		};
+		8AB88AA61F38538C005DA815 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				8A47A19F1F3596D2008C4271 /* MainViewController.swift */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		8AB88AA71F385396005DA815 /* AskIssue */ = {
+			isa = PBXGroup;
+			children = (
+				8AE792EF1F3849DD00526845 /* AskIssueViewController.swift */,
+			);
+			name = AskIssue;
+			sourceTree = "<group>";
+		};
+		8AB88AA81F3853A6005DA815 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				8AB88AA41F385388005DA815 /* AuthViewController.swift */,
+			);
+			name = Auth;
+			sourceTree = "<group>";
+		};
+		8AB88AAB1F385B7D005DA815 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				8AB88AAC1F385B90005DA815 /* KeyboardHandler.swift */,
+			);
+			name = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -306,7 +347,7 @@
 				8AB88A9E1F384CED005DA815 /* LaunchScreen.storyboard in Resources */,
 				8A47A1B11F35B9C8008C4271 /* TipView.xib in Resources */,
 				8A47A1901F359411008C4271 /* Assets.xcassets in Resources */,
-				8AB88A9F1F384CED005DA815 /* Main.storyboard in Resources */,
+				8AB88AA31F384F2B005DA815 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,11 +434,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AB88AAA1F385986005DA815 /* String+Localize.swift in Sources */,
 				8A47A1AD1F35B914008C4271 /* UIView+Nibload.swift in Sources */,
 				8A47A1BD1F35CB45008C4271 /* String+Range.swift in Sources */,
 				8A47A1BA1F35CB03008C4271 /* UIColor+Hex.swift in Sources */,
 				8A47A1B41F35C475008C4271 /* UIFont+AppFonts.swift in Sources */,
+				8AB88AA51F385388005DA815 /* AuthViewController.swift in Sources */,
 				8AB88AA11F384D3C005DA815 /* Storyboards.swift in Sources */,
+				8AB88AAD1F385B90005DA815 /* KeyboardHandler.swift in Sources */,
 				8A47A1AA1F35B8B9008C4271 /* TipView.swift in Sources */,
 				8A47A1891F359411008C4271 /* AppDelegate.swift in Sources */,
 				8AE792F01F3849DD00526845 /* AskIssueViewController.swift in Sources */,

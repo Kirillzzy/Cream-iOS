@@ -29,10 +29,6 @@ class MainViewController: UIViewController {
       kolodaView.dataSource = self
     }
   }
-  @IBOutlet fileprivate var dislikeButton: UIButton!
-  @IBOutlet fileprivate var likeButton: UIButton!
-  @IBOutlet fileprivate var plusButton: UIButton!
-  @IBOutlet fileprivate var exitButton: UIButton!
 
   var modelCollection: [TipEntity] {
     // FIXME: Delete below after loading from internet
@@ -58,11 +54,6 @@ class MainViewController: UIViewController {
     kolodaView.swipe(.right)
   }
 
-  @IBAction fileprivate func plusButtonAction(_ sender: Any) {
-  }
-
-  @IBAction fileprivate func exitButtonAction(_ sender: Any) {
-  }
 }
 
 // MARK: - KolodaView

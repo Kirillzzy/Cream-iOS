@@ -144,28 +144,28 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jgl-TU-td1">
-                                <rect key="frame" x="0.0" y="436" width="375" height="231"/>
+                                <rect key="frame" x="0.0" y="446" width="375" height="221"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_blur_view" translatesAutoresizingMaskIntoConstraints="NO" id="P8m-hb-UHo">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="231"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="221"/>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="PDC-00-gpI">
-                                        <rect key="frame" x="35" y="35" width="305" height="161"/>
+                                        <rect key="frame" x="35" y="35" width="305" height="151"/>
                                         <subviews>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Логин" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LoN-f9-mge">
-                                                <rect key="frame" x="0.0" y="0.0" width="305" height="40.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="305" height="37"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1b9-9c-xMs">
-                                                <rect key="frame" x="0.0" y="60.5" width="305" height="40"/>
+                                                <rect key="frame" x="0.0" y="57" width="305" height="37"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gbt-ry-nT6">
-                                                <rect key="frame" x="0.0" y="120.5" width="305" height="40.5"/>
+                                                <rect key="frame" x="0.0" y="114" width="305" height="37"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <state key="normal" title="Войти">
                                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -207,7 +207,7 @@
                             <constraint firstItem="fCY-Mo-Mvx" firstAttribute="height" secondItem="Pzf-Vt-W1l" secondAttribute="height" multiplier="0.17" id="dQk-FF-mpP"/>
                             <constraint firstItem="Jgl-TU-td1" firstAttribute="leading" secondItem="Sfd-K2-PQh" secondAttribute="leading" id="dXq-fj-Yds"/>
                             <constraint firstItem="h1u-sD-ZXR" firstAttribute="leading" secondItem="Sfd-K2-PQh" secondAttribute="leading" constant="8" id="etO-Av-cLE"/>
-                            <constraint firstItem="Jgl-TU-td1" firstAttribute="top" secondItem="h1u-sD-ZXR" secondAttribute="bottom" constant="150" id="hnh-yZ-GwD"/>
+                            <constraint firstItem="Jgl-TU-td1" firstAttribute="top" secondItem="h1u-sD-ZXR" secondAttribute="bottom" constant="160" id="hnh-yZ-GwD"/>
                             <constraint firstItem="f2d-Pp-MFy" firstAttribute="top" secondItem="fCY-Mo-Mvx" secondAttribute="bottom" constant="16" id="hpi-ux-t7Y"/>
                             <constraint firstAttribute="trailing" secondItem="f2d-Pp-MFy" secondAttribute="trailing" constant="8" id="iYN-hr-5nC"/>
                             <constraint firstAttribute="trailing" secondItem="Jgl-TU-td1" secondAttribute="trailing" id="mGf-IC-CXz"/>
@@ -220,13 +220,15 @@
                         <outlet property="loginButton" destination="Gbt-ry-nT6" id="la9-aP-iy9"/>
                         <outlet property="loginTextField" destination="LoN-f9-mge" id="NR7-UU-LaM"/>
                         <outlet property="passwordTextField" destination="1b9-9c-xMs" id="Jkb-Gx-tNR"/>
+                        <outlet property="placeholderViewBottomConstraint" destination="p5N-bY-k1a" id="hH5-K3-2f4"/>
+                        <outlet property="placeholderViewUpConstraint" destination="hnh-yZ-GwD" id="UP8-h1-d4z"/>
                         <outlet property="titleLabel" destination="f2d-Pp-MFy" id="2XZ-cM-Rpz"/>
                         <segue destination="rXq-Na-tT6" kind="show" id="vH1-Ig-T4E"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FFx-zk-Bud" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="270" y="-575"/>
+            <point key="canvasLocation" x="269.60000000000002" y="-575.26236881559225"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="D5T-vl-Kuf">

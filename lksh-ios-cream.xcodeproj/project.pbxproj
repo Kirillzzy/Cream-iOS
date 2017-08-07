@@ -25,6 +25,7 @@
 		8AB88AA51F385388005DA815 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB88AA41F385388005DA815 /* AuthViewController.swift */; };
 		8AB88AAA1F385986005DA815 /* String+Localize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB88AA91F385986005DA815 /* String+Localize.swift */; };
 		8AB88AAD1F385B90005DA815 /* KeyboardHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB88AAC1F385B90005DA815 /* KeyboardHandler.swift */; };
+		8AB88AB01F385C31005DA815 /* UIViewController+KeyboardDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB88AAF1F385C31005DA815 /* UIViewController+KeyboardDelegate.swift */; };
 		8AE792F01F3849DD00526845 /* AskIssueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE792EF1F3849DD00526845 /* AskIssueViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +51,7 @@
 		8AB88AA41F385388005DA815 /* AuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthViewController.swift; path = ViewControllers/AuthViewController.swift; sourceTree = "<group>"; };
 		8AB88AA91F385986005DA815 /* String+Localize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+Localize.swift"; path = "Extensions/String+Localize.swift"; sourceTree = "<group>"; };
 		8AB88AAC1F385B90005DA815 /* KeyboardHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KeyboardHandler.swift; path = Helpers/KeyboardHandler.swift; sourceTree = "<group>"; };
+		8AB88AAF1F385C31005DA815 /* UIViewController+KeyboardDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIViewController+KeyboardDelegate.swift"; path = "Extensions/UIViewController+KeyboardDelegate.swift"; sourceTree = "<group>"; };
 		8AE792EF1F3849DD00526845 /* AskIssueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AskIssueViewController.swift; path = ViewControllers/AskIssueViewController.swift; sourceTree = "<group>"; };
 		D3E6C93BAC61FF18EC7F4E23 /* Pods_lksh_ios_cream.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_lksh_ios_cream.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -188,6 +190,7 @@
 		8A47A1AB1F35B8F5008C4271 /* Extenstions */ = {
 			isa = PBXGroup;
 			children = (
+				8AB88AAE1F385C19005DA815 /* UIViewController */,
 				8A47A1B21F35C458008C4271 /* UIView */,
 				8A47A1B51F35C47A008C4271 /* UIFont */,
 				8A47A1B61F35CA96008C4271 /* UIColor */,
@@ -277,6 +280,14 @@
 				8AB88AAC1F385B90005DA815 /* KeyboardHandler.swift */,
 			);
 			name = Helpers;
+			sourceTree = "<group>";
+		};
+		8AB88AAE1F385C19005DA815 /* UIViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8AB88AAF1F385C31005DA815 /* UIViewController+KeyboardDelegate.swift */,
+			);
+			name = UIViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -442,6 +453,7 @@
 				8AB88AA51F385388005DA815 /* AuthViewController.swift in Sources */,
 				8AB88AA11F384D3C005DA815 /* Storyboards.swift in Sources */,
 				8AB88AAD1F385B90005DA815 /* KeyboardHandler.swift in Sources */,
+				8AB88AB01F385C31005DA815 /* UIViewController+KeyboardDelegate.swift in Sources */,
 				8A47A1AA1F35B8B9008C4271 /* TipView.swift in Sources */,
 				8A47A1891F359411008C4271 /* AppDelegate.swift in Sources */,
 				8AE792F01F3849DD00526845 /* AskIssueViewController.swift in Sources */,

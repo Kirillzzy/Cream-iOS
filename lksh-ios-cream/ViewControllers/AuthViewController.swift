@@ -32,13 +32,33 @@ class AuthViewController: UIViewController {
       loginButton.layer.cornerRadius = 5
     }
   }
+  @IBOutlet var placeholderViewBottomConstraint: NSLayoutConstraint!
+  @IBOutlet var placeholderViewUpConstraint: NSLayoutConstraint!
 
   override func viewDidLoad() {
     super.viewDidLoad()
+    keyboardDelegate = self
+  }
 
-    // Do any additional setup after loading the view.
+  fileprivate func dismissKeyboard() {
+    view.endEditing(true)
   }
 
   @IBAction fileprivate func loginButtonAction(_ sender: Any) {
+  }
+}
+
+// MARK: - KeyboardHandlerDelegate
+extension AuthViewController: KeyboardHandlerDelegate {
+  func keyboardStateChanged(input: UIView?, state: KeyboardState, info: KeyboardInfo) {
+    switch state {
+    case .opened:
+      placeholderViewBottomConstraint.constant += info.endFrame.height
+      placeholderViewUpConstraint.constant -= info.endFrame.height
+    case .hidden:
+      placeholderViewBottomConstraint.constant -= info.endFrame.height
+      placeholderViewUpConstraint.constant += info.endFrame.height
+    case .frameChanged: return
+    }
   }
 }

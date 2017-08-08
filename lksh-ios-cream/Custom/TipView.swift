@@ -22,9 +22,9 @@ class TipView: UIView {
       titleLabel.font = UIFont.appFont(.avenirNextDemiBold(size: 25))
     }
   }
-  @IBOutlet var descriptionLabel: UILabel! {
+  @IBOutlet var descriptionTextView: UITextView! {
     didSet {
-      descriptionLabel.font = UIFont.appFont(.avenirNextMedium(size: 17))
+      descriptionTextView.font = UIFont.appFont(.avenirNextMedium(size: 17))
     }
   }
   @IBOutlet var nameLabel: UILabel! {

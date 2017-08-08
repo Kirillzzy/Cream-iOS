@@ -10,6 +10,6 @@ import Foundation
 
 class Constants {
   struct Server {
-    static let apiBase = "http://10.15.1.242/"
+    static let apiBase = "https://cream.lksh.ru/"
   }
 }

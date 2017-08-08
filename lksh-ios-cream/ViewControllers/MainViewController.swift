@@ -108,7 +108,7 @@ extension MainViewController: KolodaViewDelegate, KolodaViewDataSource {
     let view = Bundle.main.loadNibNamed("TipView", owner: self, options: nil)?.first as! TipView
     let item = modelCollection[index]
     view.titleLabel.text = item.title
-    view.descriptionLabel.setHTMLFromString(htmlText: item.text)
+    view.descriptionTextView.setHTMLFromString(htmlText: item.text)
     view.nameLabel.text = item.creator
     view.likeLabel.text = "\(item.likes)"
     view.dislikeLabel.text = "\(item.dislikes)"

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="fVG-IP-iIG">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.17" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="fVG-IP-iIG">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -132,22 +132,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_blur_view" translatesAutoresizingMaskIntoConstraints="NO" id="Pzf-Vt-W1l">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_like" translatesAutoresizingMaskIntoConstraints="NO" id="fCY-Mo-Mvx">
-                                <rect key="frame" x="132" y="60" width="110" height="110"/>
+                                <rect key="frame" x="130.5" y="60" width="113" height="113.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="fCY-Mo-Mvx" secondAttribute="height" multiplier="1:1" id="F3f-us-A97"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cream" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f2d-Pp-MFy">
-                                <rect key="frame" x="8" y="186" width="359" height="48"/>
+                                <rect key="frame" x="8" y="189.5" width="359" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Из проблем в сливки" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="h1u-sD-ZXR">
-                                <rect key="frame" x="8" y="242" width="359" height="36"/>
+                                <rect key="frame" x="8" y="245.5" width="359" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" red="0.43821383248730961" green="0.43821383248730961" blue="0.43821383248730961" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -207,7 +207,7 @@
                         <constraints>
                             <constraint firstItem="fCY-Mo-Mvx" firstAttribute="centerX" secondItem="Pzf-Vt-W1l" secondAttribute="centerX" id="A1u-8h-Zdc"/>
                             <constraint firstAttribute="trailing" secondItem="Pzf-Vt-W1l" secondAttribute="trailing" id="BpD-VI-Zhg"/>
-                            <constraint firstItem="Pzf-Vt-W1l" firstAttribute="top" secondItem="Kfe-Fb-Wov" secondAttribute="bottom" id="Bro-Gr-DmW"/>
+                            <constraint firstItem="Pzf-Vt-W1l" firstAttribute="top" secondItem="Kfe-Fb-Wov" secondAttribute="bottom" constant="-20" id="Bro-Gr-DmW"/>
                             <constraint firstItem="Pzf-Vt-W1l" firstAttribute="leading" secondItem="Sfd-K2-PQh" secondAttribute="leading" id="Es6-fq-qmq"/>
                             <constraint firstItem="h1u-sD-ZXR" firstAttribute="top" secondItem="f2d-Pp-MFy" secondAttribute="bottom" constant="8" id="H0j-fs-eAq"/>
                             <constraint firstItem="9hI-nn-Uma" firstAttribute="top" secondItem="Pzf-Vt-W1l" secondAttribute="bottom" id="KJv-ek-X47"/>

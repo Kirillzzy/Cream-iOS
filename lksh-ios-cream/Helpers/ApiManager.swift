@@ -101,8 +101,7 @@ final class ApiManager {
     ]
     apiManagerService(addString: "api-like/", method: .post,
                       parameters: parameters, encoding: URLEncoding.httpBody,
-                      completion: { json in
-                        print(json)
+                      completion: { _ in
     })
   }
 }

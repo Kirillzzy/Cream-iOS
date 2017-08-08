@@ -66,7 +66,6 @@ class MainViewController: UIViewController {
 
   private func exitAction() {
     UserDefaultsHelper.notFirstSetup = false
-    print(UserDefaultsHelper.notFirstSetup)
     UserDefaultsHelper.token = ""
     realmWrite {
       mainRealm.deleteAll()

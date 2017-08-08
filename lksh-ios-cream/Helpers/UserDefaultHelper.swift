@@ -18,7 +18,6 @@ final class UserDefaultsHelper {
 
   static var notFirstSetup: Bool {
     get {
-      print("Not First Setup: \(defaults.bool(forKey: Keys.notFirstSetup))")
       return defaults.bool(forKey: Keys.notFirstSetup)
     }
     set {

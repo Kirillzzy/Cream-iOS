@@ -11,20 +11,18 @@ import Foundation
 final class UserDefaultsHelper {
   private static let defaults = UserDefaults.standard
 
-  enum Keys {
-    fileprivate static let firstSetup = "FirstSetup"
+  private enum Keys {
+    fileprivate static let notFirstSetup = "NotFirstSetup"
     fileprivate static let token = "Token"
   }
 
-  static var firstSetup: Bool {
+  static var notFirstSetup: Bool {
     get {
-      if !defaults.bool(forKey: Keys.firstSetup) {
-        return true
-      }
-      return false
+      print("Not First Setup: \(defaults.bool(forKey: Keys.notFirstSetup))")
+      return defaults.bool(forKey: Keys.notFirstSetup)
     }
     set {
-      defaults.set(!newValue, forKey: Keys.firstSetup)
+      defaults.set(newValue, forKey: Keys.notFirstSetup)
     }
   }
 

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class AskIssueViewModel: NSObject, DisplayCollection {
   static var modelsForRegistration: [CellViewAnyModelType.Type] {
@@ -82,10 +83,14 @@ class AskIssueViewModel: NSObject, DisplayCollection {
 
   func bottomButtonAction() {
     if titleText != "", descriptionText != "" {
+      SVProgressHUD.show()
+      UIApplication.shared.beginIgnoringInteractionEvents()
       ApiManager.sendProblem(title: titleText, description: descriptionText, completion: { [weak self] (tip) in
         realmWrite {
           mainRealm.add(tip, update: true)
         }
+        SVProgressHUD.dismiss()
+        UIApplication.shared.endIgnoringInteractionEvents()
         guard let viewController = self?.delegate?.getViewController() else { return }
         viewController.navigationController?.popViewController(animated: true)
       })

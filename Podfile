@@ -6,4 +6,5 @@ pod 'Koloda'
 pod 'SDWebImage'
 pod 'Alamofire’
 pod 'SwiftyJSON'
+pod 'SVProgressHUD'
 end

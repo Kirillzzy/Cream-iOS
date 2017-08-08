@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class AuthViewController: UIViewController {
 
@@ -57,9 +58,15 @@ class AuthViewController: UIViewController {
 
     if let login = login, let password = password,
       login != "", password != "" {
-      ApiManager.authorize(login: login, password: password, completion: {
-        UserDefaultsHelper.firstSetup = false
-        self.performSegue(withIdentifier: "FromAuthViewController", sender: self)
+      SVProgressHUD.show()
+      UIApplication.shared.beginIgnoringInteractionEvents()
+      ApiManager.authorize(login: login, password: password, completion: { result in
+        SVProgressHUD.dismiss()
+        UIApplication.shared.endIgnoringInteractionEvents()
+        if result {
+          UserDefaultsHelper.notFirstSetup = true
+          self.performSegue(withIdentifier: "FromAuthViewController", sender: self)
+        }
       })
     }
   }

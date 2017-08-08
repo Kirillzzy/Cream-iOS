@@ -31,7 +31,7 @@ final class ApiManager {
                       })
   }
 
-  static func authorize(login: String, password: String, completion: @escaping (() -> Void)) {
+  static func authorize(login: String, password: String, completion: @escaping ((Bool) -> Void)) {
     let parameters: Parameters = [
       "username": login,
       "password": password
@@ -39,8 +39,11 @@ final class ApiManager {
     apiManagerService(addString: "api-login/", method: .post,
                       parameters: parameters, encoding: URLEncoding.httpBody,
                       completion: { json in
-                        UserDefaultsHelper.token = json["token"].stringValue
-                        completion()
+                        if json["token"].stringValue != "" {
+                          UserDefaultsHelper.token = json["token"].stringValue
+                          completion(true)
+                        }
+                        completion(false)
     })
   }
 

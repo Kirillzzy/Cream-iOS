@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                    didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
     RealmController.shared.setup()
     if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
-      if UserDefaultsHelper.firstSetup {
+      if !UserDefaultsHelper.notFirstSetup {
         appDelegate.setRootViewController(with: "AuthViewController")
       } else {
         appDelegate.setRootViewController(with: "NavigationViewController")

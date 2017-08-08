@@ -189,16 +189,26 @@
                                             <constraint firstItem="Gbt-ry-nT6" firstAttribute="height" secondItem="1b9-9c-xMs" secondAttribute="height" id="VPq-Ak-D6M"/>
                                         </constraints>
                                     </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Неверный логин или пароль" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pTW-1o-Q6B">
+                                        <rect key="frame" x="16" y="8" width="343" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="0.26413193473474916" blue="0.14319212223053912" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="P8m-hb-UHo" secondAttribute="bottom" id="7n2-Mp-Ccj"/>
+                                    <constraint firstItem="PDC-00-gpI" firstAttribute="top" secondItem="pTW-1o-Q6B" secondAttribute="bottom" constant="8" id="A49-br-FRe"/>
                                     <constraint firstItem="PDC-00-gpI" firstAttribute="top" secondItem="Jgl-TU-td1" secondAttribute="top" constant="40" id="Bwd-bL-ecR"/>
+                                    <constraint firstItem="pTW-1o-Q6B" firstAttribute="top" secondItem="Jgl-TU-td1" secondAttribute="top" constant="8" id="Ce7-rU-c71"/>
+                                    <constraint firstItem="pTW-1o-Q6B" firstAttribute="leading" secondItem="Jgl-TU-td1" secondAttribute="leading" constant="16" id="G2L-4j-pmd"/>
                                     <constraint firstItem="P8m-hb-UHo" firstAttribute="leading" secondItem="Jgl-TU-td1" secondAttribute="leading" id="L6u-nA-3p2"/>
                                     <constraint firstItem="P8m-hb-UHo" firstAttribute="top" secondItem="Jgl-TU-td1" secondAttribute="top" id="QSM-Yo-lA9"/>
                                     <constraint firstItem="PDC-00-gpI" firstAttribute="leading" secondItem="Jgl-TU-td1" secondAttribute="leading" constant="35" id="Ue9-m3-FbX"/>
                                     <constraint firstAttribute="trailing" secondItem="P8m-hb-UHo" secondAttribute="trailing" id="aes-kO-pD6"/>
                                     <constraint firstAttribute="trailing" secondItem="PDC-00-gpI" secondAttribute="trailing" constant="35" id="jUc-lu-ECZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="pTW-1o-Q6B" secondAttribute="trailing" constant="16" id="nMM-KC-OBr"/>
                                     <constraint firstAttribute="bottom" secondItem="PDC-00-gpI" secondAttribute="bottom" constant="40" id="ykV-Gy-2MS"/>
                                 </constraints>
                             </view>
@@ -229,6 +239,7 @@
                         <outlet property="loginButton" destination="Gbt-ry-nT6" id="la9-aP-iy9"/>
                         <outlet property="loginTextField" destination="LoN-f9-mge" id="NR7-UU-LaM"/>
                         <outlet property="passwordTextField" destination="1b9-9c-xMs" id="Jkb-Gx-tNR"/>
+                        <outlet property="placeholderLabel" destination="pTW-1o-Q6B" id="eBz-R5-Umh"/>
                         <outlet property="placeholderViewBottomConstraint" destination="p5N-bY-k1a" id="hH5-K3-2f4"/>
                         <outlet property="titleLabel" destination="f2d-Pp-MFy" id="2XZ-cM-Rpz"/>
                         <segue destination="rXq-Na-tT6" kind="presentation" identifier="FromAuthViewController" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="7fg-hj-zps"/>

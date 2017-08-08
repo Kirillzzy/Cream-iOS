@@ -13,9 +13,11 @@ class NavigationViewController: UINavigationController {
   override func viewDidLoad() {
     super.viewDidLoad()
     navigationBar.setBackgroundImage(UIImage(), for: .default)
-    navigationBar.barTintColor = UIColor(.white)
+    navigationBar.barTintColor = UIColor(.orange)
     navigationBar.isTranslucent = false
-    navigationBar.tintColor = UIColor(.black)
+    navigationBar.tintColor = UIColor(.white)
+    let titleAttributes = [NSForegroundColorAttributeName: UIColor.white]
+    navigationBar.titleTextAttributes = titleAttributes
   }
 
   override func pushViewController(_ viewController: UIViewController, animated: Bool) {

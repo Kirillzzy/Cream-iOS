@@ -70,7 +70,7 @@
                                 <constraint firstAttribute="width" secondItem="2z9-2K-dYP" secondAttribute="height" multiplier="1:1" id="uzh-ds-GrY"/>
                             </constraints>
                         </imageView>
-                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="asdhfkashdfasifasofuaiasdfuoasidfiuoasduofasdufas" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="VH9-da-b4L">
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="asdhfkashdfasifasofuaiasdfuoasidfiuoasduofasdufas" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VH9-da-b4L">
                             <rect key="frame" x="16" y="76" width="269" height="346"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>

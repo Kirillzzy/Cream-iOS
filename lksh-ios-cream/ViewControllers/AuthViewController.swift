@@ -33,6 +33,11 @@ class AuthViewController: UIViewController {
       loginButton.layer.cornerRadius = 5
     }
   }
+  @IBOutlet var placeholderLabel: UILabel! {
+    didSet {
+      placeholderLabel.isHidden = true
+    }
+  }
   @IBOutlet var placeholderViewBottomConstraint: NSLayoutConstraint!
   fileprivate var tapGesture: UITapGestureRecognizer!
 
@@ -60,12 +65,14 @@ class AuthViewController: UIViewController {
       login != "", password != "" {
       SVProgressHUD.show()
       UIApplication.shared.beginIgnoringInteractionEvents()
-      ApiManager.authorize(login: login, password: password, completion: { result in
+      ApiManager.authorize(login: login, password: password, completion: { [weak self] (result) in
         SVProgressHUD.dismiss()
         UIApplication.shared.endIgnoringInteractionEvents()
         if result {
           UserDefaultsHelper.notFirstSetup = true
-          self.performSegue(withIdentifier: "FromAuthViewController", sender: self)
+          self?.performSegue(withIdentifier: "FromAuthViewController", sender: self)
+        } else {
+          self?.placeholderLabel.isHidden = false
         }
       })
     }

@@ -26,17 +26,29 @@ class MainViewController: UIViewController {
     }
   }
 
-  var modelCollection: [TipEntity]!
+  var modelCollection: DataModelCollection<TipEntity> {
+    let dataCollection = DataModelCollection(type: TipEntity.self)
+    return dataCollection
+  }
 
   override func viewDidLoad() {
     super.viewDidLoad()
     ApiManager.getPosts(completion: { tips, name in
       self.title = name
-      self.modelCollection = tips
+      realmWrite {
+        for tip in tips {
+          mainRealm.add(tip, update: true)
+        }
+      }
 
       self.kolodaView.delegate = self
       self.kolodaView.dataSource = self
     })
+  }
+
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    kolodaView.reloadData()
   }
 
   @IBAction fileprivate func dislikeButtonAction(_ sender: Any) {
@@ -82,7 +94,7 @@ extension MainViewController: KolodaViewDelegate, KolodaViewDataSource {
     view.descriptionLabel.setHTMLFromString(htmlText: item.text)
     view.nameLabel.text = item.creator
     view.rateLabel.text = "\(item.likes)"
-    view.dateLabel.text = item.time
+    view.dateLabel.text = item.time.convertToReadableDate()
 
     return view
   }

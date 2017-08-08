@@ -15,6 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   func application(_ application: UIApplication,
                    didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    RealmController.shared.setup()
     if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
       if UserDefaultsHelper.firstSetup {
         appDelegate.setRootViewController(with: "AuthViewController")
@@ -22,8 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         appDelegate.setRootViewController(with: "NavigationViewController")
       }
     }
-    ApiManager.getPosts(completion: { _, _ in })
-    ApiManager.sendProblem(title: "Hello", description: "You was hacked")
+
     return true
   }
 

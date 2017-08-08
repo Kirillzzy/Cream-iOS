@@ -13,6 +13,8 @@ class AskIssueViewModel: NSObject, DisplayCollection {
     return [TextFieldPlateTableViewCellModel.self, TextViewPlateTableViewCellModel.self]
   }
 
+  weak var delegate: ActionsForViewController?
+
   enum `Type` {
     case title
     case description
@@ -80,7 +82,13 @@ class AskIssueViewModel: NSObject, DisplayCollection {
 
   func bottomButtonAction() {
     if titleText != "", descriptionText != "" {
-      // TODO: - Implement this
+      ApiManager.sendProblem(title: titleText, description: descriptionText, completion: { [weak self] (tip) in
+        realmWrite {
+          mainRealm.add(tip, update: true)
+        }
+        guard let viewController = self?.delegate?.getViewController() else { return }
+        viewController.navigationController?.popViewController(animated: true)
+      })
     }
   }
 

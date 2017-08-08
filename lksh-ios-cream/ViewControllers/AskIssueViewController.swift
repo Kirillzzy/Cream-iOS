@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AskIssueViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class AskIssueViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, ActionsForViewController {
 
   @IBOutlet fileprivate var tableView: UITableView! {
     didSet {
@@ -22,6 +22,7 @@ class AskIssueViewController: UIViewController, UITableViewDelegate, UITableView
   override func viewDidLoad() {
     super.viewDidLoad()
     viewModel = AskIssueViewModel()
+    viewModel.delegate = self
     tableView.registerNibs(from: viewModel)
     keyboardDelegate = self
 

@@ -20,6 +20,13 @@
 		8A47A1BA1F35CB03008C4271 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A47A1B91F35CB03008C4271 /* UIColor+Hex.swift */; };
 		8A47A1BD1F35CB45008C4271 /* String+Range.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A47A1BC1F35CB45008C4271 /* String+Range.swift */; };
 		8A9C3CDD1F38B507005941CE /* UILabel+HtmlRender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9C3CDC1F38B507005941CE /* UILabel+HtmlRender.swift */; };
+		8A9C3CE01F39868B005941CE /* String+TimeConvert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9C3CDF1F39868B005941CE /* String+TimeConvert.swift */; };
+		8A9C3CE31F399024005941CE /* ActionsForViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9C3CE21F399024005941CE /* ActionsForViewController.swift */; };
+		8A9C3CE61F399315005941CE /* RealmConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9C3CE51F399315005941CE /* RealmConfiguration.swift */; };
+		8A9C3CE81F399330005941CE /* Realm+Writing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9C3CE71F399330005941CE /* Realm+Writing.swift */; };
+		8A9C3CEA1F399365005941CE /* DataModelCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9C3CE91F399365005941CE /* DataModelCollection.swift */; };
+		8A9C3CED1F3993D9005941CE /* Notification+RealmError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9C3CEC1F3993D9005941CE /* Notification+RealmError.swift */; };
+		8A9C3CEF1F39945A005941CE /* List+RemoveDublicates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9C3CEE1F39945A005941CE /* List+RemoveDublicates.swift */; };
 		8AB88A9E1F384CED005DA815 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AB88A9C1F384CED005DA815 /* LaunchScreen.storyboard */; };
 		8AB88AA11F384D3C005DA815 /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB88AA01F384D3C005DA815 /* Storyboards.swift */; };
 		8AB88AA31F384F2B005DA815 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AB88AA21F384F2B005DA815 /* Main.storyboard */; };
@@ -76,6 +83,13 @@
 		8A47A1B91F35CB03008C4271 /* UIColor+Hex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+Hex.swift"; path = "Extensions/UIColor+Hex.swift"; sourceTree = "<group>"; };
 		8A47A1BC1F35CB45008C4271 /* String+Range.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+Range.swift"; path = "Extensions/String+Range.swift"; sourceTree = "<group>"; };
 		8A9C3CDC1F38B507005941CE /* UILabel+HtmlRender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UILabel+HtmlRender.swift"; path = "Extensions/UILabel+HtmlRender.swift"; sourceTree = "<group>"; };
+		8A9C3CDF1F39868B005941CE /* String+TimeConvert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+TimeConvert.swift"; path = "Extensions/String+TimeConvert.swift"; sourceTree = "<group>"; };
+		8A9C3CE21F399024005941CE /* ActionsForViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActionsForViewController.swift; path = Protocols/ActionsForViewController.swift; sourceTree = "<group>"; };
+		8A9C3CE51F399315005941CE /* RealmConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RealmConfiguration.swift; path = Helpers/RealmConfiguration.swift; sourceTree = "<group>"; };
+		8A9C3CE71F399330005941CE /* Realm+Writing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Realm+Writing.swift"; path = "Helpers/Realm+Writing.swift"; sourceTree = "<group>"; };
+		8A9C3CE91F399365005941CE /* DataModelCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataModelCollection.swift; path = Helpers/DataModelCollection.swift; sourceTree = "<group>"; };
+		8A9C3CEC1F3993D9005941CE /* Notification+RealmError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Notification+RealmError.swift"; path = "Extensions/Notification+RealmError.swift"; sourceTree = "<group>"; };
+		8A9C3CEE1F39945A005941CE /* List+RemoveDublicates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "List+RemoveDublicates.swift"; path = "Helpers/List+RemoveDublicates.swift"; sourceTree = "<group>"; };
 		8AB88A9C1F384CED005DA815 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Storyboards/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8AB88AA01F384D3C005DA815 /* Storyboards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Storyboards.swift; path = Storyboards/Storyboards.swift; sourceTree = "<group>"; };
 		8AB88AA21F384F2B005DA815 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Storyboards/Main.storyboard; sourceTree = "<group>"; };
@@ -190,6 +204,7 @@
 				8A47A1A51F35AE81008C4271 /* Entities */,
 				8A47A1A81F35B832008C4271 /* Custom */,
 				8AB88AAB1F385B7D005DA815 /* Helpers */,
+				8A9C3CE11F39900D005941CE /* Protocols */,
 				8A47A1AB1F35B8F5008C4271 /* Extenstions */,
 			);
 			name = Sources;
@@ -254,6 +269,7 @@
 		8A47A1AB1F35B8F5008C4271 /* Extenstions */ = {
 			isa = PBXGroup;
 			children = (
+				8A9C3CEB1F3993C2005941CE /* Notification */,
 				8A9C3CDE1F3983D3005941CE /* UILabel */,
 				8AB88AE01F387B26005DA815 /* UITableViewHeaderFooterView */,
 				8AB88ACB1F387200005DA815 /* UITableViewCell */,
@@ -317,6 +333,7 @@
 			children = (
 				8A47A1BC1F35CB45008C4271 /* String+Range.swift */,
 				8AB88AA91F385986005DA815 /* String+Localize.swift */,
+				8A9C3CDF1F39868B005941CE /* String+TimeConvert.swift */,
 			);
 			name = String;
 			sourceTree = "<group>";
@@ -327,6 +344,33 @@
 				8A9C3CDC1F38B507005941CE /* UILabel+HtmlRender.swift */,
 			);
 			name = UILabel;
+			sourceTree = "<group>";
+		};
+		8A9C3CE11F39900D005941CE /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				8A9C3CE21F399024005941CE /* ActionsForViewController.swift */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		8A9C3CE41F399305005941CE /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				8A9C3CE51F399315005941CE /* RealmConfiguration.swift */,
+				8A9C3CE71F399330005941CE /* Realm+Writing.swift */,
+				8A9C3CE91F399365005941CE /* DataModelCollection.swift */,
+				8A9C3CEE1F39945A005941CE /* List+RemoveDublicates.swift */,
+			);
+			name = Realm;
+			sourceTree = "<group>";
+		};
+		8A9C3CEB1F3993C2005941CE /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				8A9C3CEC1F3993D9005941CE /* Notification+RealmError.swift */,
+			);
+			name = Notification;
 			sourceTree = "<group>";
 		};
 		8AB88AA61F38538C005DA815 /* Main */ = {
@@ -357,6 +401,7 @@
 		8AB88AAB1F385B7D005DA815 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				8A9C3CE41F399305005941CE /* Realm */,
 				8AB88AAC1F385B90005DA815 /* KeyboardHandler.swift */,
 				8AB88AC21F3870A1005DA815 /* CellViewAnyModel.swift */,
 				8AB88AC41F3870C3005DA815 /* DisplayCollection.swift */,
@@ -654,9 +699,12 @@
 				8AB88AEF1F388EBB005DA815 /* UIViewController+NavigationBarItems.swift in Sources */,
 				8AB88AD41F3876E9005DA815 /* TextViewPlateTableViewCell.swift in Sources */,
 				8AB88AEB1F38801A005DA815 /* UITableView+BottomInset.swift in Sources */,
+				8A9C3CE31F399024005941CE /* ActionsForViewController.swift in Sources */,
+				8A9C3CED1F3993D9005941CE /* Notification+RealmError.swift in Sources */,
 				8AB88AED1F388CB6005DA815 /* UserDefaultHelper.swift in Sources */,
 				8AB88AB41F3862C4005DA815 /* ActionButton.swift in Sources */,
 				8AB88ACF1F387248005DA815 /* ReusableCell.swift in Sources */,
+				8A9C3CEF1F39945A005941CE /* List+RemoveDublicates.swift in Sources */,
 				8AB88AD61F3876E9005DA815 /* TextViewPlateTableViewCellModel.swift in Sources */,
 				8AB88AAD1F385B90005DA815 /* KeyboardHandler.swift in Sources */,
 				8AB88AB01F385C31005DA815 /* UIViewController+KeyboardDelegate.swift in Sources */,
@@ -666,16 +714,20 @@
 				8A47A1891F359411008C4271 /* AppDelegate.swift in Sources */,
 				8AB88AC31F3870A1005DA815 /* CellViewAnyModel.swift in Sources */,
 				8A9C3CDD1F38B507005941CE /* UILabel+HtmlRender.swift in Sources */,
+				8A9C3CEA1F399365005941CE /* DataModelCollection.swift in Sources */,
 				8AE792F01F3849DD00526845 /* AskIssueViewController.swift in Sources */,
+				8A9C3CE81F399330005941CE /* Realm+Writing.swift in Sources */,
 				8AB88AF51F38920D005DA815 /* Reachability.swift in Sources */,
 				8AB88ABF1F387034005DA815 /* TextFieldPlateTableViewCell.swift in Sources */,
 				8AB88AE21F387B45005DA815 /* UIHeaderFooterView+Reuse.swift in Sources */,
+				8A9C3CE61F399315005941CE /* RealmConfiguration.swift in Sources */,
 				8A47A1B81F35CABD008C4271 /* UIColor+ColorsPalette.swift in Sources */,
 				8A47A1A01F3596D2008C4271 /* MainViewController.swift in Sources */,
 				8AB88ADF1F387AFA005DA815 /* UITableView+Reuse.swift in Sources */,
 				8A47A1A71F35B263008C4271 /* TipEntity.swift in Sources */,
 				8AB88ACA1F3871DC005DA815 /* UITableView+RegisterCells.swift in Sources */,
 				8AB88AC71F38710A005DA815 /* AskIssueViewModel.swift in Sources */,
+				8A9C3CE01F39868B005941CE /* String+TimeConvert.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

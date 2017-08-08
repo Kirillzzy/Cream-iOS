@@ -11,6 +11,7 @@ import Alamofire
 import SwiftyJSON
 
 final class ApiManager {
+  static let roomPin: String = "0"
   private static func apiManagerService(addString: String,
                                         method: HTTPMethod = .get,
                                         parameters: Parameters? = nil,
@@ -43,7 +44,7 @@ final class ApiManager {
     })
   }
 
-  static func getPosts(roomPin: String = "0", completion: @escaping (([TipEntity], String) -> Void)) {
+  static func getPosts(roomPin: String = roomPin, completion: @escaping (([TipEntity], String) -> Void)) {
     apiManagerService(addString: "problems/?jwt=\(UserDefaultsHelper.token)&room_pin=\(roomPin)",
       encoding: URLEncoding.httpBody,
       completion: { json in
@@ -63,16 +64,25 @@ final class ApiManager {
     })
   }
 
-  static func sendProblem(title: String, description: String) {
+  static func sendProblem(title: String, description: String,
+                          roomPin: String = roomPin, completion: @escaping ((TipEntity) -> Void)) {
     let parameters: Parameters = [
       "title": title,
       "description": description,
-      "jwt": UserDefaultsHelper.token
+      "jwt": UserDefaultsHelper.token,
+      "room_pin": roomPin
     ]
     apiManagerService(addString: "problems/", method: .post,
                       parameters: parameters, encoding: URLEncoding.httpBody,
                       completion: { json in
-                        print(json)
+                        let tip = TipEntity()
+                        tip.id = json["id"].intValue
+                        tip.title = json["title"].stringValue
+                        tip.text = json["description"].stringValue
+                        tip.creator = json["author_name"].stringValue
+                        tip.time = json["time"].stringValue
+                        tip.likes = json["rating"].intValue
+                        completion(tip)
     })
   }
 }

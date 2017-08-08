@@ -64,8 +64,7 @@
                     <navigationItem key="navigationItem" title="Пожелания ЛКШат" id="Vn5-pW-mbR">
                         <barButtonItem key="leftBarButtonItem" image="img_exit" id="AAs-Nx-OhU">
                             <connections>
-                                <action selector="exitButtonAction:" destination="BYZ-38-t0r" id="AEb-sG-40l"/>
-                                <segue destination="fVG-IP-iIG" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="20e-Sp-Cxq"/>
+                                <action selector="exitButtonAction:" destination="BYZ-38-t0r" id="fA4-ea-kM7"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="img_plus" id="nes-JA-AQr">
@@ -76,6 +75,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="kolodaView" destination="8RD-Wn-ZId" id="3Pa-gW-3ri"/>
+                        <segue destination="fVG-IP-iIG" kind="presentation" identifier="ExitToAuthViewController" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="aWp-as-yTw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

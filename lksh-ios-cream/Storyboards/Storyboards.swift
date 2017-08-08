@@ -242,11 +242,44 @@ extension UITableView {
 
 
 //MARK: - MainViewController
+extension UIStoryboardSegue {
+    func selection() -> MainViewController.Segue? {
+        if let identifier = self.identifier {
+            return MainViewController.Segue(rawValue: identifier)
+        }
+        return nil
+    }
+}
+
 extension MainViewController: IdentifiableProtocol { 
     var storyboardIdentifier: String? { return "MainViewController" }
     static var storyboardIdentifier: String? { return "MainViewController" }
 }
 
+extension MainViewController { 
+
+    enum Segue: String, CustomStringConvertible, SegueProtocol {
+        case ExitToAuthViewController = "ExitToAuthViewController"
+
+        var kind: SegueKind? {
+            switch (self) {
+            case .ExitToAuthViewController:
+                return SegueKind(rawValue: "presentation")
+            }
+        }
+
+        var destination: UIViewController.Type? {
+            switch (self) {
+            case .ExitToAuthViewController:
+                return AuthViewController.self
+            }
+        }
+
+        var identifier: String? { return self.description } 
+        var description: String { return self.rawValue }
+    }
+
+}
 
 //MARK: - AskIssueViewController
 extension AskIssueViewController: IdentifiableProtocol { 

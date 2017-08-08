@@ -23,6 +23,8 @@ class MainViewController: UIViewController {
       kolodaView.alphaValueTransparent = 1
       kolodaView.countOfVisibleCards = 2
       modalTransitionStyle = .flipHorizontal
+      kolodaView.delegate = self
+      kolodaView.dataSource = self
     }
   }
 
@@ -33,16 +35,14 @@ class MainViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    ApiManager.getPosts(completion: { tips, name in
-      self.title = name
+    ApiManager.getPosts(completion: { [weak self] (tips, name) in
+      self?.title = name
       realmWrite {
         for tip in tips {
           mainRealm.add(tip, update: true)
         }
       }
-
-      self.kolodaView.delegate = self
-      self.kolodaView.dataSource = self
+      self?.kolodaView.reloadData()
     })
   }
 
@@ -60,8 +60,17 @@ class MainViewController: UIViewController {
   }
 
   @IBAction fileprivate func exitButtonAction(_ sender: Any) {
+    exitAction()
+    performSegue(withIdentifier: "ExitToAuthViewController", sender: self)
+  }
+
+  private func exitAction() {
     UserDefaultsHelper.notFirstSetup = false
+    print(UserDefaultsHelper.notFirstSetup)
     UserDefaultsHelper.token = ""
+    realmWrite {
+      mainRealm.deleteAll()
+    }
   }
 
 }

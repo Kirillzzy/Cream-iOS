@@ -43,11 +43,23 @@ final class ApiManager {
     })
   }
 
-  static func getPosts(roomPin: String = "0", completion: @escaping (([TipEntity]) -> Void)) {
+  static func getPosts(roomPin: String = "0", completion: @escaping (([TipEntity], String) -> Void)) {
     apiManagerService(addString: "problems/?jwt=\(UserDefaultsHelper.token)&room_pin=\(roomPin)",
       encoding: URLEncoding.httpBody,
       completion: { json in
         print(json)
+        var tips = [TipEntity]()
+        for tip in json["data"].arrayValue {
+          let newTip = TipEntity()
+          newTip.id = tip["id"].intValue
+          newTip.title = tip["title"].stringValue
+          newTip.creator = tip["author_name"].stringValue
+          newTip.text = tip["description"].stringValue
+          newTip.likes = tip["rating"].intValue
+          newTip.time = tip["time"].stringValue
+          tips.append(newTip)
+        }
+        completion(tips, json["room_name"].stringValue)
     })
   }
 

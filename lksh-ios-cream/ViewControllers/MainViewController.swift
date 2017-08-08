@@ -23,27 +23,20 @@ class MainViewController: UIViewController {
       kolodaView.alphaValueTransparent = 1
       kolodaView.countOfVisibleCards = 2
       modalTransitionStyle = .flipHorizontal
-
-      // FIXME: Move after loading from internet
-      kolodaView.delegate = self
-      kolodaView.dataSource = self
     }
   }
 
-  var modelCollection: [TipEntity] {
-    // FIXME: Delete below after loading from internet
-    let tip = TipEntity()
-    // swiftlint:disable:next line_length
-    tip.text = "У нас в ГК нету коврика, из-за этого все страдают. На самом деле, много грязи и шняги. Если бы все подумали как решить эту проблему...."
-    tip.title = "Коврик в ГК"
-    tip.creator = "Kirill Averyanov"
-    tip.likes = 15
-    return [tip, tip, tip, tip, tip]
-  }
+  var modelCollection: [TipEntity]!
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view, typically from a nib.
+    ApiManager.getPosts(completion: { tips, name in
+      self.title = name
+      self.modelCollection = tips
+
+      self.kolodaView.delegate = self
+      self.kolodaView.dataSource = self
+    })
   }
 
   @IBAction fileprivate func dislikeButtonAction(_ sender: Any) {
@@ -54,8 +47,8 @@ class MainViewController: UIViewController {
     kolodaView.swipe(.right)
   }
   @IBAction fileprivate func exitButtonAction(_ sender: Any) {
-    // TODO - Implement Exit
     UserDefaultsHelper.firstSetup = true
+    UserDefaultsHelper.token = ""
   }
 
 }
@@ -86,10 +79,10 @@ extension MainViewController: KolodaViewDelegate, KolodaViewDataSource {
     let view = Bundle.main.loadNibNamed("TipView", owner: self, options: nil)?.first as! TipView
     let item = modelCollection[index]
     view.titleLabel.text = item.title
-    view.descriptionLabel.text = item.text
+    view.descriptionLabel.setHTMLFromString(htmlText: item.text)
     view.nameLabel.text = item.creator
     view.rateLabel.text = "\(item.likes)"
-//    view.dateLabel.text = item.date
+    view.dateLabel.text = item.time
 
     return view
   }

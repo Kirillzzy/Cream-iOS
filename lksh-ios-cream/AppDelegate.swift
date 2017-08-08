@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         appDelegate.setRootViewController(with: "NavigationViewController")
       }
     }
-
+    ApiManager.getPosts(completion: { _, _ in })
     ApiManager.sendProblem(title: "Hello", description: "You was hacked")
     return true
   }

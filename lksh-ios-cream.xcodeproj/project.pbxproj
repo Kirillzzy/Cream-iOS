@@ -19,6 +19,7 @@
 		8A47A1B81F35CABD008C4271 /* UIColor+ColorsPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A47A1B71F35CABD008C4271 /* UIColor+ColorsPalette.swift */; };
 		8A47A1BA1F35CB03008C4271 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A47A1B91F35CB03008C4271 /* UIColor+Hex.swift */; };
 		8A47A1BD1F35CB45008C4271 /* String+Range.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A47A1BC1F35CB45008C4271 /* String+Range.swift */; };
+		8A9C3CDD1F38B507005941CE /* UILabel+HtmlRender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9C3CDC1F38B507005941CE /* UILabel+HtmlRender.swift */; };
 		8AB88A9E1F384CED005DA815 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AB88A9C1F384CED005DA815 /* LaunchScreen.storyboard */; };
 		8AB88AA11F384D3C005DA815 /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB88AA01F384D3C005DA815 /* Storyboards.swift */; };
 		8AB88AA31F384F2B005DA815 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AB88AA21F384F2B005DA815 /* Main.storyboard */; };
@@ -74,6 +75,7 @@
 		8A47A1B71F35CABD008C4271 /* UIColor+ColorsPalette.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+ColorsPalette.swift"; path = "Extensions/UIColor+ColorsPalette.swift"; sourceTree = "<group>"; };
 		8A47A1B91F35CB03008C4271 /* UIColor+Hex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+Hex.swift"; path = "Extensions/UIColor+Hex.swift"; sourceTree = "<group>"; };
 		8A47A1BC1F35CB45008C4271 /* String+Range.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+Range.swift"; path = "Extensions/String+Range.swift"; sourceTree = "<group>"; };
+		8A9C3CDC1F38B507005941CE /* UILabel+HtmlRender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UILabel+HtmlRender.swift"; path = "Extensions/UILabel+HtmlRender.swift"; sourceTree = "<group>"; };
 		8AB88A9C1F384CED005DA815 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Storyboards/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8AB88AA01F384D3C005DA815 /* Storyboards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Storyboards.swift; path = Storyboards/Storyboards.swift; sourceTree = "<group>"; };
 		8AB88AA21F384F2B005DA815 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Storyboards/Main.storyboard; sourceTree = "<group>"; };
@@ -252,6 +254,7 @@
 		8A47A1AB1F35B8F5008C4271 /* Extenstions */ = {
 			isa = PBXGroup;
 			children = (
+				8A9C3CDE1F3983D3005941CE /* UILabel */,
 				8AB88AE01F387B26005DA815 /* UITableViewHeaderFooterView */,
 				8AB88ACB1F387200005DA815 /* UITableViewCell */,
 				8AB88AC81F3871C8005DA815 /* UITableView */,
@@ -316,6 +319,14 @@
 				8AB88AA91F385986005DA815 /* String+Localize.swift */,
 			);
 			name = String;
+			sourceTree = "<group>";
+		};
+		8A9C3CDE1F3983D3005941CE /* UILabel */ = {
+			isa = PBXGroup;
+			children = (
+				8A9C3CDC1F38B507005941CE /* UILabel+HtmlRender.swift */,
+			);
+			name = UILabel;
 			sourceTree = "<group>";
 		};
 		8AB88AA61F38538C005DA815 /* Main */ = {
@@ -654,6 +665,7 @@
 				8AB88AD81F38773C005DA815 /* TextViewWithPlaceholder.swift in Sources */,
 				8A47A1891F359411008C4271 /* AppDelegate.swift in Sources */,
 				8AB88AC31F3870A1005DA815 /* CellViewAnyModel.swift in Sources */,
+				8A9C3CDD1F38B507005941CE /* UILabel+HtmlRender.swift in Sources */,
 				8AE792F01F3849DD00526845 /* AskIssueViewController.swift in Sources */,
 				8AB88AF51F38920D005DA815 /* Reachability.swift in Sources */,
 				8AB88ABF1F387034005DA815 /* TextFieldPlateTableViewCell.swift in Sources */,

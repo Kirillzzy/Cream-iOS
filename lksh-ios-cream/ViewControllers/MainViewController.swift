@@ -25,11 +25,23 @@ class MainViewController: UIViewController {
       modalTransitionStyle = .flipHorizontal
     }
   }
-
-  var modelCollection: DataModelCollection<TipEntity> {
-    let dataCollection = DataModelCollection(type: TipEntity.self)
-    return dataCollection
+  @IBOutlet var endView: UIView! {
+    didSet {
+      endView.layer.masksToBounds = true
+      endView.layer.cornerRadius = 10
+      endView.isHidden = true
+    }
   }
+  @IBOutlet var endLabel: UILabel! {
+    didSet {
+      endLabel.font = UIFont.appFont(.avenirNextMedium(size: 25))
+    }
+  }
+  
+  fileprivate var modelCollection: DataModelCollection<TipEntity> = {
+    let modelCollection = DataModelCollection(type: TipEntity.self)
+    return modelCollection
+  }()
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -95,6 +107,12 @@ extension MainViewController: KolodaViewDelegate, KolodaViewDataSource {
     case .right, .bottomRight, .topRight:
       ApiManager.sendLike(problemId: modelCollection[index].id, isLiked: true)
     case .up, .down: break
+    }
+  }
+
+  func koloda(_ koloda: KolodaView, didShowCardAt index: Int) {
+    if modelCollection.count - 3 <= index {
+      endView.isHidden = false
     }
   }
 

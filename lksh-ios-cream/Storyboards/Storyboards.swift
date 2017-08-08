@@ -53,8 +53,8 @@ struct Storyboards {
             return UIStoryboard(name: self.identifier, bundle: nil)
         }
 
-        static func instantiateInitialViewController() -> AuthViewController {
-            return self.storyboard.instantiateInitialViewController() as! AuthViewController
+        static func instantiateInitialViewController() -> NavigationViewController {
+            return self.storyboard.instantiateInitialViewController() as! NavigationViewController
         }
 
         static func instantiateViewController(withIdentifier: String) -> UIViewController {

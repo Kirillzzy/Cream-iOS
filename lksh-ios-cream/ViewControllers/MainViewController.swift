@@ -103,7 +103,8 @@ extension MainViewController: KolodaViewDelegate, KolodaViewDataSource {
     view.titleLabel.text = item.title
     view.descriptionLabel.setHTMLFromString(htmlText: item.text)
     view.nameLabel.text = item.creator
-    view.rateLabel.text = "\(item.likes)"
+    view.likeLabel.text = "\(item.likes)"
+    view.dislikeLabel.text = "\(item.dislikes)"
     view.dateLabel.text = item.time.convertToReadableDate()
 
     return view

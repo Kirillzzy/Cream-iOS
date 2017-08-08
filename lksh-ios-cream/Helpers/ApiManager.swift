@@ -51,7 +51,6 @@ final class ApiManager {
     apiManagerService(addString: "problems/?jwt=\(UserDefaultsHelper.token)&room_pin=\(roomPin)",
       encoding: URLEncoding.httpBody,
       completion: { json in
-        print(json)
         var tips = [TipEntity]()
         for tip in json["data"].arrayValue {
           let newTip = TipEntity()
@@ -84,8 +83,23 @@ final class ApiManager {
                         tip.text = json["description"].stringValue
                         tip.creator = json["author_name"].stringValue
                         tip.time = json["time"].stringValue
-                        tip.likes = json["rating"].intValue
+                        tip.likes = json["liked"].intValue
+                        tip.dislikes = json["disliked"].intValue
                         completion(tip)
+    })
+  }
+
+  static func sendLike(problemId: Int, isLiked: Bool, roomPin: String = "0") {
+    let parameters: Parameters = [
+      "problem_id": problemId,
+      "is_liked": (isLiked ? "like" : "dislike"),
+      "jwt": UserDefaultsHelper.token,
+      "room_pin": roomPin
+    ]
+    apiManagerService(addString: "api-like/", method: .post,
+                      parameters: parameters, encoding: URLEncoding.httpBody,
+                      completion: { json in
+                        print(json)
     })
   }
 }

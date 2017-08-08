@@ -37,9 +37,14 @@ class TipView: UIView {
       dateLabel.font = UIFont.appFont(.avenirNextMedium(size: 13))
     }
   }
-  @IBOutlet var rateLabel: UILabel! {
+  @IBOutlet var likeLabel: UILabel! {
     didSet {
-      rateLabel.font = UIFont.appFont(.avenirNextMedium(size: 13))
+      likeLabel.font = UIFont.appFont(.avenirNextMedium(size: 13))
+    }
+  }
+  @IBOutlet var dislikeLabel: UILabel! {
+    didSet {
+      dislikeLabel.font = UIFont.appFont(.avenirNextMedium(size: 13))
     }
   }
 

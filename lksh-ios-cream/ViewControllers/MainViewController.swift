@@ -23,8 +23,6 @@ class MainViewController: UIViewController {
       kolodaView.alphaValueTransparent = 1
       kolodaView.countOfVisibleCards = 2
       modalTransitionStyle = .flipHorizontal
-      kolodaView.delegate = self
-      kolodaView.dataSource = self
     }
   }
 
@@ -42,7 +40,9 @@ class MainViewController: UIViewController {
           mainRealm.add(tip, update: true)
         }
       }
-      self?.kolodaView.reloadData()
+      self?.kolodaView.delegate = self
+      self?.kolodaView.dataSource = self
+//      self?.kolodaView.reloadData()
     })
   }
 
@@ -81,7 +81,7 @@ extension MainViewController: KolodaViewDelegate, KolodaViewDataSource {
   }
 
   func kolodaDidRunOutOfCards(_ koloda: KolodaView) {
-    kolodaView.resetCurrentCardIndex()
+//    kolodaView.resetCurrentCardIndex()
   }
 
   func kolodaSwipeThresholdRatioMargin(_ koloda: KolodaView) -> CGFloat? {

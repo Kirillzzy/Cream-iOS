@@ -72,7 +72,9 @@ class AuthViewController: UIViewController {
           UserDefaultsHelper.notFirstSetup = true
           self?.performSegue(withIdentifier: "FromAuthViewController", sender: self)
         } else {
-          self?.placeholderLabel.isHidden = false
+          if !UserDefaultsHelper.notFirstSetup {
+            self?.placeholderLabel.isHidden = false
+          }
         }
       })
     }

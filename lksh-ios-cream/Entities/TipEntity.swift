@@ -16,6 +16,8 @@ class TipEntity: Object {
   dynamic var dislikes: Int = 0
   dynamic var creator: String = ""
   dynamic var time: String = ""
+  dynamic var isLiked: Bool = false
+  dynamic var isDisliked: Bool = false
 
   override static func primaryKey() -> String? {
     return "id"

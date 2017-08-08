@@ -58,8 +58,11 @@ final class ApiManager {
           newTip.title = tip["title"].stringValue
           newTip.creator = tip["author_name"].stringValue
           newTip.text = tip["description"].stringValue
-          newTip.likes = tip["rating"].intValue
+          newTip.likes = tip["liked"].intValue
+          newTip.dislikes = tip["disliked"].intValue
           newTip.time = tip["time"].stringValue
+          newTip.isLiked = tip["is_liked"].boolValue
+          newTip.isDisliked = tip["is_disliked"].boolValue
           tips.append(newTip)
         }
         completion(tips, json["room_name"].stringValue)

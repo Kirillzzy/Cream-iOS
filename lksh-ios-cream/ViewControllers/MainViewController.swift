@@ -90,6 +90,13 @@ extension MainViewController: KolodaViewDelegate, KolodaViewDataSource {
   }
 
   func koloda(_ koloda: KolodaView, didSwipeCardAt index: Int, in direction: SwipeResultDirection) {
+    switch direction {
+    case .left, .bottomLeft, .topLeft:
+      ApiManager.sendLike(problemId: modelCollection[index].id, isLiked: false)
+    case .right, .bottomRight, .topRight:
+      ApiManager.sendLike(problemId: modelCollection[index].id, isLiked: true)
+    case .up, .down: break
+    }
   }
 
   func kolodaNumberOfCards(_ koloda: KolodaView) -> Int {

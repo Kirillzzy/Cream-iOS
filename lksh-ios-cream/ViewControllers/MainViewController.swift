@@ -37,7 +37,6 @@ class MainViewController: UIViewController {
       endLabel.font = UIFont.appFont(.avenirNextMedium(size: 25))
     }
   }
-  
   fileprivate var modelCollection: DataModelCollection<TipEntity> = {
     let modelCollection = DataModelCollection(type: TipEntity.self)
     return modelCollection
@@ -93,7 +92,6 @@ extension MainViewController: KolodaViewDelegate, KolodaViewDataSource {
   }
 
   func kolodaDidRunOutOfCards(_ koloda: KolodaView) {
-//    kolodaView.resetCurrentCardIndex()
   }
 
   func kolodaSwipeThresholdRatioMargin(_ koloda: KolodaView) -> CGFloat? {

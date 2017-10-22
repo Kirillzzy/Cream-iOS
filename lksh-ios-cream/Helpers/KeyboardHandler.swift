@@ -6,6 +6,8 @@
 //  Copyright © 2017 Kirill Averyanov. All rights reserved.
 //
 
+// Mikhail Galperin: github.com/piechart
+
 import UIKit
 
 var activeInputView: UIView?

@@ -33,7 +33,7 @@ class AskIssueViewController: UIViewController, UITableViewDelegate, UITableView
     view.addGestureRecognizer(tapGesture)
   }
 
-  func bottomButtonAction() {
+  @objc func bottomButtonAction() {
     viewModel.bottomButtonAction()
   }
 

@@ -17,8 +17,8 @@ extension UITextView {
     if let data = modifiedFont.data(using: .unicode, allowLossyConversion: true),
       let attrStr = try? NSAttributedString(
         data: data,
-        options: [NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType,
-                  NSCharacterEncodingDocumentAttribute: String.Encoding.utf8.rawValue],
+        options: [NSAttributedString.DocumentReadingOptionKey.documentType: NSAttributedString.DocumentType.html,
+                  NSAttributedString.DocumentReadingOptionKey.characterEncoding: String.Encoding.utf8.rawValue],
         documentAttributes: nil
       ) {
       self.attributedText = attrStr

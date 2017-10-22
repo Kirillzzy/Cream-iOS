@@ -9,15 +9,15 @@
 import RealmSwift
 
 class TipEntity: Object {
-  dynamic var id: Int = 0
-  dynamic var text: String = ""
-  dynamic var title: String = ""
-  dynamic var likes: Int = 0
-  dynamic var dislikes: Int = 0
-  dynamic var creator: String = ""
-  dynamic var time: String = ""
-  dynamic var isLiked: Bool = false
-  dynamic var isDisliked: Bool = false
+  @objc dynamic var id: Int = 0
+  @objc dynamic var text: String = ""
+  @objc dynamic var title: String = ""
+  @objc dynamic var likes: Int = 0
+  @objc dynamic var dislikes: Int = 0
+  @objc dynamic var creator: String = ""
+  @objc dynamic var time: String = ""
+  @objc dynamic var isLiked: Bool = false
+  @objc dynamic var isDisliked: Bool = false
 
   override static func primaryKey() -> String? {
     return "id"
